@@ -1,0 +1,748 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;800;900&family=Source+Sans+3:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800;900&family=Source+Sans+3:wght@300;400;500;600&display=swap" rel="stylesheet">
+<script>tailwind.config={theme:{extend:{colors:{"navy":"#1A3A5C","copper":"#E8621A","cream":"#F5F2EE","ink":"#1C1C1C","cream-dark":"#EDE9E3","navy-light":"#2a5080","sand":"#EAE4DB","mist":"#D6CFC4"},fontFamily:{"headline":["Barlow Condensed","sans-serif"],"body":["Source Sans 3","sans-serif"]}}}}</script>
+<script src="https://cdn.tailwindcss.com"></script>
+<style>
+.bg-navy{background-color:#1A3A5C}
+.text-navy{color:#1A3A5C}
+.border-navy{border-color:#1A3A5C}
+.fill-navy{fill:#1A3A5C}
+.ring-navy{--tw-ring-color:#1A3A5C}
+.from-navy{--tw-gradient-from:#1A3A5C;--tw-gradient-stops:var(--tw-gradient-from),var(--tw-gradient-to,rgba(26,58,92,0))}
+.to-navy{--tw-gradient-to:#1A3A5C}
+.via-navy{--tw-gradient-stops:var(--tw-gradient-from),#1A3A5C,var(--tw-gradient-to,rgba(26,58,92,0))}
+.bg-navy\/5{background-color:rgba(26,58,92,0.05)}
+.text-navy\/5{color:rgba(26,58,92,0.05)}
+.border-navy\/5{border-color:rgba(26,58,92,0.05)}
+.bg-navy\/10{background-color:rgba(26,58,92,0.1)}
+.text-navy\/10{color:rgba(26,58,92,0.1)}
+.border-navy\/10{border-color:rgba(26,58,92,0.1)}
+.bg-navy\/15{background-color:rgba(26,58,92,0.15)}
+.text-navy\/15{color:rgba(26,58,92,0.15)}
+.border-navy\/15{border-color:rgba(26,58,92,0.15)}
+.bg-navy\/20{background-color:rgba(26,58,92,0.2)}
+.text-navy\/20{color:rgba(26,58,92,0.2)}
+.border-navy\/20{border-color:rgba(26,58,92,0.2)}
+.bg-navy\/25{background-color:rgba(26,58,92,0.25)}
+.text-navy\/25{color:rgba(26,58,92,0.25)}
+.border-navy\/25{border-color:rgba(26,58,92,0.25)}
+.bg-navy\/30{background-color:rgba(26,58,92,0.3)}
+.text-navy\/30{color:rgba(26,58,92,0.3)}
+.border-navy\/30{border-color:rgba(26,58,92,0.3)}
+.bg-navy\/40{background-color:rgba(26,58,92,0.4)}
+.text-navy\/40{color:rgba(26,58,92,0.4)}
+.border-navy\/40{border-color:rgba(26,58,92,0.4)}
+.bg-navy\/50{background-color:rgba(26,58,92,0.5)}
+.text-navy\/50{color:rgba(26,58,92,0.5)}
+.border-navy\/50{border-color:rgba(26,58,92,0.5)}
+.bg-navy\/60{background-color:rgba(26,58,92,0.6)}
+.text-navy\/60{color:rgba(26,58,92,0.6)}
+.border-navy\/60{border-color:rgba(26,58,92,0.6)}
+.bg-navy\/70{background-color:rgba(26,58,92,0.7)}
+.text-navy\/70{color:rgba(26,58,92,0.7)}
+.border-navy\/70{border-color:rgba(26,58,92,0.7)}
+.bg-navy\/75{background-color:rgba(26,58,92,0.75)}
+.text-navy\/75{color:rgba(26,58,92,0.75)}
+.border-navy\/75{border-color:rgba(26,58,92,0.75)}
+.bg-navy\/80{background-color:rgba(26,58,92,0.8)}
+.text-navy\/80{color:rgba(26,58,92,0.8)}
+.border-navy\/80{border-color:rgba(26,58,92,0.8)}
+.bg-navy\/90{background-color:rgba(26,58,92,0.9)}
+.text-navy\/90{color:rgba(26,58,92,0.9)}
+.border-navy\/90{border-color:rgba(26,58,92,0.9)}
+.bg-navy\/95{background-color:rgba(26,58,92,0.95)}
+.text-navy\/95{color:rgba(26,58,92,0.95)}
+.border-navy\/95{border-color:rgba(26,58,92,0.95)}
+.bg-copper{background-color:#E8621A}
+.text-copper{color:#E8621A}
+.border-copper{border-color:#E8621A}
+.fill-copper{fill:#E8621A}
+.ring-copper{--tw-ring-color:#E8621A}
+.from-copper{--tw-gradient-from:#E8621A;--tw-gradient-stops:var(--tw-gradient-from),var(--tw-gradient-to,rgba(232,98,26,0))}
+.to-copper{--tw-gradient-to:#E8621A}
+.via-copper{--tw-gradient-stops:var(--tw-gradient-from),#E8621A,var(--tw-gradient-to,rgba(232,98,26,0))}
+.bg-copper\/5{background-color:rgba(232,98,26,0.05)}
+.text-copper\/5{color:rgba(232,98,26,0.05)}
+.border-copper\/5{border-color:rgba(232,98,26,0.05)}
+.bg-copper\/10{background-color:rgba(232,98,26,0.1)}
+.text-copper\/10{color:rgba(232,98,26,0.1)}
+.border-copper\/10{border-color:rgba(232,98,26,0.1)}
+.bg-copper\/15{background-color:rgba(232,98,26,0.15)}
+.text-copper\/15{color:rgba(232,98,26,0.15)}
+.border-copper\/15{border-color:rgba(232,98,26,0.15)}
+.bg-copper\/20{background-color:rgba(232,98,26,0.2)}
+.text-copper\/20{color:rgba(232,98,26,0.2)}
+.border-copper\/20{border-color:rgba(232,98,26,0.2)}
+.bg-copper\/25{background-color:rgba(232,98,26,0.25)}
+.text-copper\/25{color:rgba(232,98,26,0.25)}
+.border-copper\/25{border-color:rgba(232,98,26,0.25)}
+.bg-copper\/30{background-color:rgba(232,98,26,0.3)}
+.text-copper\/30{color:rgba(232,98,26,0.3)}
+.border-copper\/30{border-color:rgba(232,98,26,0.3)}
+.bg-copper\/40{background-color:rgba(232,98,26,0.4)}
+.text-copper\/40{color:rgba(232,98,26,0.4)}
+.border-copper\/40{border-color:rgba(232,98,26,0.4)}
+.bg-copper\/50{background-color:rgba(232,98,26,0.5)}
+.text-copper\/50{color:rgba(232,98,26,0.5)}
+.border-copper\/50{border-color:rgba(232,98,26,0.5)}
+.bg-copper\/60{background-color:rgba(232,98,26,0.6)}
+.text-copper\/60{color:rgba(232,98,26,0.6)}
+.border-copper\/60{border-color:rgba(232,98,26,0.6)}
+.bg-copper\/70{background-color:rgba(232,98,26,0.7)}
+.text-copper\/70{color:rgba(232,98,26,0.7)}
+.border-copper\/70{border-color:rgba(232,98,26,0.7)}
+.bg-copper\/75{background-color:rgba(232,98,26,0.75)}
+.text-copper\/75{color:rgba(232,98,26,0.75)}
+.border-copper\/75{border-color:rgba(232,98,26,0.75)}
+.bg-copper\/80{background-color:rgba(232,98,26,0.8)}
+.text-copper\/80{color:rgba(232,98,26,0.8)}
+.border-copper\/80{border-color:rgba(232,98,26,0.8)}
+.bg-copper\/90{background-color:rgba(232,98,26,0.9)}
+.text-copper\/90{color:rgba(232,98,26,0.9)}
+.border-copper\/90{border-color:rgba(232,98,26,0.9)}
+.bg-copper\/95{background-color:rgba(232,98,26,0.95)}
+.text-copper\/95{color:rgba(232,98,26,0.95)}
+.border-copper\/95{border-color:rgba(232,98,26,0.95)}
+.bg-cream{background-color:#F5F2EE}
+.text-cream{color:#F5F2EE}
+.border-cream{border-color:#F5F2EE}
+.fill-cream{fill:#F5F2EE}
+.ring-cream{--tw-ring-color:#F5F2EE}
+.from-cream{--tw-gradient-from:#F5F2EE;--tw-gradient-stops:var(--tw-gradient-from),var(--tw-gradient-to,rgba(245,242,238,0))}
+.to-cream{--tw-gradient-to:#F5F2EE}
+.via-cream{--tw-gradient-stops:var(--tw-gradient-from),#F5F2EE,var(--tw-gradient-to,rgba(245,242,238,0))}
+.bg-cream\/5{background-color:rgba(245,242,238,0.05)}
+.text-cream\/5{color:rgba(245,242,238,0.05)}
+.border-cream\/5{border-color:rgba(245,242,238,0.05)}
+.bg-cream\/10{background-color:rgba(245,242,238,0.1)}
+.text-cream\/10{color:rgba(245,242,238,0.1)}
+.border-cream\/10{border-color:rgba(245,242,238,0.1)}
+.bg-cream\/15{background-color:rgba(245,242,238,0.15)}
+.text-cream\/15{color:rgba(245,242,238,0.15)}
+.border-cream\/15{border-color:rgba(245,242,238,0.15)}
+.bg-cream\/20{background-color:rgba(245,242,238,0.2)}
+.text-cream\/20{color:rgba(245,242,238,0.2)}
+.border-cream\/20{border-color:rgba(245,242,238,0.2)}
+.bg-cream\/25{background-color:rgba(245,242,238,0.25)}
+.text-cream\/25{color:rgba(245,242,238,0.25)}
+.border-cream\/25{border-color:rgba(245,242,238,0.25)}
+.bg-cream\/30{background-color:rgba(245,242,238,0.3)}
+.text-cream\/30{color:rgba(245,242,238,0.3)}
+.border-cream\/30{border-color:rgba(245,242,238,0.3)}
+.bg-cream\/40{background-color:rgba(245,242,238,0.4)}
+.text-cream\/40{color:rgba(245,242,238,0.4)}
+.border-cream\/40{border-color:rgba(245,242,238,0.4)}
+.bg-cream\/50{background-color:rgba(245,242,238,0.5)}
+.text-cream\/50{color:rgba(245,242,238,0.5)}
+.border-cream\/50{border-color:rgba(245,242,238,0.5)}
+.bg-cream\/60{background-color:rgba(245,242,238,0.6)}
+.text-cream\/60{color:rgba(245,242,238,0.6)}
+.border-cream\/60{border-color:rgba(245,242,238,0.6)}
+.bg-cream\/70{background-color:rgba(245,242,238,0.7)}
+.text-cream\/70{color:rgba(245,242,238,0.7)}
+.border-cream\/70{border-color:rgba(245,242,238,0.7)}
+.bg-cream\/75{background-color:rgba(245,242,238,0.75)}
+.text-cream\/75{color:rgba(245,242,238,0.75)}
+.border-cream\/75{border-color:rgba(245,242,238,0.75)}
+.bg-cream\/80{background-color:rgba(245,242,238,0.8)}
+.text-cream\/80{color:rgba(245,242,238,0.8)}
+.border-cream\/80{border-color:rgba(245,242,238,0.8)}
+.bg-cream\/90{background-color:rgba(245,242,238,0.9)}
+.text-cream\/90{color:rgba(245,242,238,0.9)}
+.border-cream\/90{border-color:rgba(245,242,238,0.9)}
+.bg-cream\/95{background-color:rgba(245,242,238,0.95)}
+.text-cream\/95{color:rgba(245,242,238,0.95)}
+.border-cream\/95{border-color:rgba(245,242,238,0.95)}
+.bg-ink{background-color:#1C1C1C}
+.text-ink{color:#1C1C1C}
+.border-ink{border-color:#1C1C1C}
+.fill-ink{fill:#1C1C1C}
+.ring-ink{--tw-ring-color:#1C1C1C}
+.from-ink{--tw-gradient-from:#1C1C1C;--tw-gradient-stops:var(--tw-gradient-from),var(--tw-gradient-to,rgba(28,28,28,0))}
+.to-ink{--tw-gradient-to:#1C1C1C}
+.via-ink{--tw-gradient-stops:var(--tw-gradient-from),#1C1C1C,var(--tw-gradient-to,rgba(28,28,28,0))}
+.bg-ink\/5{background-color:rgba(28,28,28,0.05)}
+.text-ink\/5{color:rgba(28,28,28,0.05)}
+.border-ink\/5{border-color:rgba(28,28,28,0.05)}
+.bg-ink\/10{background-color:rgba(28,28,28,0.1)}
+.text-ink\/10{color:rgba(28,28,28,0.1)}
+.border-ink\/10{border-color:rgba(28,28,28,0.1)}
+.bg-ink\/15{background-color:rgba(28,28,28,0.15)}
+.text-ink\/15{color:rgba(28,28,28,0.15)}
+.border-ink\/15{border-color:rgba(28,28,28,0.15)}
+.bg-ink\/20{background-color:rgba(28,28,28,0.2)}
+.text-ink\/20{color:rgba(28,28,28,0.2)}
+.border-ink\/20{border-color:rgba(28,28,28,0.2)}
+.bg-ink\/25{background-color:rgba(28,28,28,0.25)}
+.text-ink\/25{color:rgba(28,28,28,0.25)}
+.border-ink\/25{border-color:rgba(28,28,28,0.25)}
+.bg-ink\/30{background-color:rgba(28,28,28,0.3)}
+.text-ink\/30{color:rgba(28,28,28,0.3)}
+.border-ink\/30{border-color:rgba(28,28,28,0.3)}
+.bg-ink\/40{background-color:rgba(28,28,28,0.4)}
+.text-ink\/40{color:rgba(28,28,28,0.4)}
+.border-ink\/40{border-color:rgba(28,28,28,0.4)}
+.bg-ink\/50{background-color:rgba(28,28,28,0.5)}
+.text-ink\/50{color:rgba(28,28,28,0.5)}
+.border-ink\/50{border-color:rgba(28,28,28,0.5)}
+.bg-ink\/60{background-color:rgba(28,28,28,0.6)}
+.text-ink\/60{color:rgba(28,28,28,0.6)}
+.border-ink\/60{border-color:rgba(28,28,28,0.6)}
+.bg-ink\/70{background-color:rgba(28,28,28,0.7)}
+.text-ink\/70{color:rgba(28,28,28,0.7)}
+.border-ink\/70{border-color:rgba(28,28,28,0.7)}
+.bg-ink\/75{background-color:rgba(28,28,28,0.75)}
+.text-ink\/75{color:rgba(28,28,28,0.75)}
+.border-ink\/75{border-color:rgba(28,28,28,0.75)}
+.bg-ink\/80{background-color:rgba(28,28,28,0.8)}
+.text-ink\/80{color:rgba(28,28,28,0.8)}
+.border-ink\/80{border-color:rgba(28,28,28,0.8)}
+.bg-ink\/90{background-color:rgba(28,28,28,0.9)}
+.text-ink\/90{color:rgba(28,28,28,0.9)}
+.border-ink\/90{border-color:rgba(28,28,28,0.9)}
+.bg-ink\/95{background-color:rgba(28,28,28,0.95)}
+.text-ink\/95{color:rgba(28,28,28,0.95)}
+.border-ink\/95{border-color:rgba(28,28,28,0.95)}
+.bg-cream-dark{background-color:#EDE9E3}
+.text-cream-dark{color:#EDE9E3}
+.border-cream-dark{border-color:#EDE9E3}
+.fill-cream-dark{fill:#EDE9E3}
+.ring-cream-dark{--tw-ring-color:#EDE9E3}
+.from-cream-dark{--tw-gradient-from:#EDE9E3;--tw-gradient-stops:var(--tw-gradient-from),var(--tw-gradient-to,rgba(237,233,227,0))}
+.to-cream-dark{--tw-gradient-to:#EDE9E3}
+.via-cream-dark{--tw-gradient-stops:var(--tw-gradient-from),#EDE9E3,var(--tw-gradient-to,rgba(237,233,227,0))}
+.bg-cream-dark\/5{background-color:rgba(237,233,227,0.05)}
+.text-cream-dark\/5{color:rgba(237,233,227,0.05)}
+.border-cream-dark\/5{border-color:rgba(237,233,227,0.05)}
+.bg-cream-dark\/10{background-color:rgba(237,233,227,0.1)}
+.text-cream-dark\/10{color:rgba(237,233,227,0.1)}
+.border-cream-dark\/10{border-color:rgba(237,233,227,0.1)}
+.bg-cream-dark\/15{background-color:rgba(237,233,227,0.15)}
+.text-cream-dark\/15{color:rgba(237,233,227,0.15)}
+.border-cream-dark\/15{border-color:rgba(237,233,227,0.15)}
+.bg-cream-dark\/20{background-color:rgba(237,233,227,0.2)}
+.text-cream-dark\/20{color:rgba(237,233,227,0.2)}
+.border-cream-dark\/20{border-color:rgba(237,233,227,0.2)}
+.bg-cream-dark\/25{background-color:rgba(237,233,227,0.25)}
+.text-cream-dark\/25{color:rgba(237,233,227,0.25)}
+.border-cream-dark\/25{border-color:rgba(237,233,227,0.25)}
+.bg-cream-dark\/30{background-color:rgba(237,233,227,0.3)}
+.text-cream-dark\/30{color:rgba(237,233,227,0.3)}
+.border-cream-dark\/30{border-color:rgba(237,233,227,0.3)}
+.bg-cream-dark\/40{background-color:rgba(237,233,227,0.4)}
+.text-cream-dark\/40{color:rgba(237,233,227,0.4)}
+.border-cream-dark\/40{border-color:rgba(237,233,227,0.4)}
+.bg-cream-dark\/50{background-color:rgba(237,233,227,0.5)}
+.text-cream-dark\/50{color:rgba(237,233,227,0.5)}
+.border-cream-dark\/50{border-color:rgba(237,233,227,0.5)}
+.bg-cream-dark\/60{background-color:rgba(237,233,227,0.6)}
+.text-cream-dark\/60{color:rgba(237,233,227,0.6)}
+.border-cream-dark\/60{border-color:rgba(237,233,227,0.6)}
+.bg-cream-dark\/70{background-color:rgba(237,233,227,0.7)}
+.text-cream-dark\/70{color:rgba(237,233,227,0.7)}
+.border-cream-dark\/70{border-color:rgba(237,233,227,0.7)}
+.bg-cream-dark\/75{background-color:rgba(237,233,227,0.75)}
+.text-cream-dark\/75{color:rgba(237,233,227,0.75)}
+.border-cream-dark\/75{border-color:rgba(237,233,227,0.75)}
+.bg-cream-dark\/80{background-color:rgba(237,233,227,0.8)}
+.text-cream-dark\/80{color:rgba(237,233,227,0.8)}
+.border-cream-dark\/80{border-color:rgba(237,233,227,0.8)}
+.bg-cream-dark\/90{background-color:rgba(237,233,227,0.9)}
+.text-cream-dark\/90{color:rgba(237,233,227,0.9)}
+.border-cream-dark\/90{border-color:rgba(237,233,227,0.9)}
+.bg-cream-dark\/95{background-color:rgba(237,233,227,0.95)}
+.text-cream-dark\/95{color:rgba(237,233,227,0.95)}
+.border-cream-dark\/95{border-color:rgba(237,233,227,0.95)}
+.bg-navy-light{background-color:#2a5080}
+.text-navy-light{color:#2a5080}
+.border-navy-light{border-color:#2a5080}
+.fill-navy-light{fill:#2a5080}
+.ring-navy-light{--tw-ring-color:#2a5080}
+.from-navy-light{--tw-gradient-from:#2a5080;--tw-gradient-stops:var(--tw-gradient-from),var(--tw-gradient-to,rgba(42,80,128,0))}
+.to-navy-light{--tw-gradient-to:#2a5080}
+.via-navy-light{--tw-gradient-stops:var(--tw-gradient-from),#2a5080,var(--tw-gradient-to,rgba(42,80,128,0))}
+.bg-navy-light\/5{background-color:rgba(42,80,128,0.05)}
+.text-navy-light\/5{color:rgba(42,80,128,0.05)}
+.border-navy-light\/5{border-color:rgba(42,80,128,0.05)}
+.bg-navy-light\/10{background-color:rgba(42,80,128,0.1)}
+.text-navy-light\/10{color:rgba(42,80,128,0.1)}
+.border-navy-light\/10{border-color:rgba(42,80,128,0.1)}
+.bg-navy-light\/15{background-color:rgba(42,80,128,0.15)}
+.text-navy-light\/15{color:rgba(42,80,128,0.15)}
+.border-navy-light\/15{border-color:rgba(42,80,128,0.15)}
+.bg-navy-light\/20{background-color:rgba(42,80,128,0.2)}
+.text-navy-light\/20{color:rgba(42,80,128,0.2)}
+.border-navy-light\/20{border-color:rgba(42,80,128,0.2)}
+.bg-navy-light\/25{background-color:rgba(42,80,128,0.25)}
+.text-navy-light\/25{color:rgba(42,80,128,0.25)}
+.border-navy-light\/25{border-color:rgba(42,80,128,0.25)}
+.bg-navy-light\/30{background-color:rgba(42,80,128,0.3)}
+.text-navy-light\/30{color:rgba(42,80,128,0.3)}
+.border-navy-light\/30{border-color:rgba(42,80,128,0.3)}
+.bg-navy-light\/40{background-color:rgba(42,80,128,0.4)}
+.text-navy-light\/40{color:rgba(42,80,128,0.4)}
+.border-navy-light\/40{border-color:rgba(42,80,128,0.4)}
+.bg-navy-light\/50{background-color:rgba(42,80,128,0.5)}
+.text-navy-light\/50{color:rgba(42,80,128,0.5)}
+.border-navy-light\/50{border-color:rgba(42,80,128,0.5)}
+.bg-navy-light\/60{background-color:rgba(42,80,128,0.6)}
+.text-navy-light\/60{color:rgba(42,80,128,0.6)}
+.border-navy-light\/60{border-color:rgba(42,80,128,0.6)}
+.bg-navy-light\/70{background-color:rgba(42,80,128,0.7)}
+.text-navy-light\/70{color:rgba(42,80,128,0.7)}
+.border-navy-light\/70{border-color:rgba(42,80,128,0.7)}
+.bg-navy-light\/75{background-color:rgba(42,80,128,0.75)}
+.text-navy-light\/75{color:rgba(42,80,128,0.75)}
+.border-navy-light\/75{border-color:rgba(42,80,128,0.75)}
+.bg-navy-light\/80{background-color:rgba(42,80,128,0.8)}
+.text-navy-light\/80{color:rgba(42,80,128,0.8)}
+.border-navy-light\/80{border-color:rgba(42,80,128,0.8)}
+.bg-navy-light\/90{background-color:rgba(42,80,128,0.9)}
+.text-navy-light\/90{color:rgba(42,80,128,0.9)}
+.border-navy-light\/90{border-color:rgba(42,80,128,0.9)}
+.bg-navy-light\/95{background-color:rgba(42,80,128,0.95)}
+.text-navy-light\/95{color:rgba(42,80,128,0.95)}
+.border-navy-light\/95{border-color:rgba(42,80,128,0.95)}
+.bg-sand{background-color:#EAE4DB}
+.text-sand{color:#EAE4DB}
+.border-sand{border-color:#EAE4DB}
+.fill-sand{fill:#EAE4DB}
+.ring-sand{--tw-ring-color:#EAE4DB}
+.from-sand{--tw-gradient-from:#EAE4DB;--tw-gradient-stops:var(--tw-gradient-from),var(--tw-gradient-to,rgba(234,228,219,0))}
+.to-sand{--tw-gradient-to:#EAE4DB}
+.via-sand{--tw-gradient-stops:var(--tw-gradient-from),#EAE4DB,var(--tw-gradient-to,rgba(234,228,219,0))}
+.bg-sand\/5{background-color:rgba(234,228,219,0.05)}
+.text-sand\/5{color:rgba(234,228,219,0.05)}
+.border-sand\/5{border-color:rgba(234,228,219,0.05)}
+.bg-sand\/10{background-color:rgba(234,228,219,0.1)}
+.text-sand\/10{color:rgba(234,228,219,0.1)}
+.border-sand\/10{border-color:rgba(234,228,219,0.1)}
+.bg-sand\/15{background-color:rgba(234,228,219,0.15)}
+.text-sand\/15{color:rgba(234,228,219,0.15)}
+.border-sand\/15{border-color:rgba(234,228,219,0.15)}
+.bg-sand\/20{background-color:rgba(234,228,219,0.2)}
+.text-sand\/20{color:rgba(234,228,219,0.2)}
+.border-sand\/20{border-color:rgba(234,228,219,0.2)}
+.bg-sand\/25{background-color:rgba(234,228,219,0.25)}
+.text-sand\/25{color:rgba(234,228,219,0.25)}
+.border-sand\/25{border-color:rgba(234,228,219,0.25)}
+.bg-sand\/30{background-color:rgba(234,228,219,0.3)}
+.text-sand\/30{color:rgba(234,228,219,0.3)}
+.border-sand\/30{border-color:rgba(234,228,219,0.3)}
+.bg-sand\/40{background-color:rgba(234,228,219,0.4)}
+.text-sand\/40{color:rgba(234,228,219,0.4)}
+.border-sand\/40{border-color:rgba(234,228,219,0.4)}
+.bg-sand\/50{background-color:rgba(234,228,219,0.5)}
+.text-sand\/50{color:rgba(234,228,219,0.5)}
+.border-sand\/50{border-color:rgba(234,228,219,0.5)}
+.bg-sand\/60{background-color:rgba(234,228,219,0.6)}
+.text-sand\/60{color:rgba(234,228,219,0.6)}
+.border-sand\/60{border-color:rgba(234,228,219,0.6)}
+.bg-sand\/70{background-color:rgba(234,228,219,0.7)}
+.text-sand\/70{color:rgba(234,228,219,0.7)}
+.border-sand\/70{border-color:rgba(234,228,219,0.7)}
+.bg-sand\/75{background-color:rgba(234,228,219,0.75)}
+.text-sand\/75{color:rgba(234,228,219,0.75)}
+.border-sand\/75{border-color:rgba(234,228,219,0.75)}
+.bg-sand\/80{background-color:rgba(234,228,219,0.8)}
+.text-sand\/80{color:rgba(234,228,219,0.8)}
+.border-sand\/80{border-color:rgba(234,228,219,0.8)}
+.bg-sand\/90{background-color:rgba(234,228,219,0.9)}
+.text-sand\/90{color:rgba(234,228,219,0.9)}
+.border-sand\/90{border-color:rgba(234,228,219,0.9)}
+.bg-sand\/95{background-color:rgba(234,228,219,0.95)}
+.text-sand\/95{color:rgba(234,228,219,0.95)}
+.border-sand\/95{border-color:rgba(234,228,219,0.95)}
+.bg-mist{background-color:#D6CFC4}
+.text-mist{color:#D6CFC4}
+.border-mist{border-color:#D6CFC4}
+.fill-mist{fill:#D6CFC4}
+.ring-mist{--tw-ring-color:#D6CFC4}
+.from-mist{--tw-gradient-from:#D6CFC4;--tw-gradient-stops:var(--tw-gradient-from),var(--tw-gradient-to,rgba(214,207,196,0))}
+.to-mist{--tw-gradient-to:#D6CFC4}
+.via-mist{--tw-gradient-stops:var(--tw-gradient-from),#D6CFC4,var(--tw-gradient-to,rgba(214,207,196,0))}
+.bg-mist\/5{background-color:rgba(214,207,196,0.05)}
+.text-mist\/5{color:rgba(214,207,196,0.05)}
+.border-mist\/5{border-color:rgba(214,207,196,0.05)}
+.bg-mist\/10{background-color:rgba(214,207,196,0.1)}
+.text-mist\/10{color:rgba(214,207,196,0.1)}
+.border-mist\/10{border-color:rgba(214,207,196,0.1)}
+.bg-mist\/15{background-color:rgba(214,207,196,0.15)}
+.text-mist\/15{color:rgba(214,207,196,0.15)}
+.border-mist\/15{border-color:rgba(214,207,196,0.15)}
+.bg-mist\/20{background-color:rgba(214,207,196,0.2)}
+.text-mist\/20{color:rgba(214,207,196,0.2)}
+.border-mist\/20{border-color:rgba(214,207,196,0.2)}
+.bg-mist\/25{background-color:rgba(214,207,196,0.25)}
+.text-mist\/25{color:rgba(214,207,196,0.25)}
+.border-mist\/25{border-color:rgba(214,207,196,0.25)}
+.bg-mist\/30{background-color:rgba(214,207,196,0.3)}
+.text-mist\/30{color:rgba(214,207,196,0.3)}
+.border-mist\/30{border-color:rgba(214,207,196,0.3)}
+.bg-mist\/40{background-color:rgba(214,207,196,0.4)}
+.text-mist\/40{color:rgba(214,207,196,0.4)}
+.border-mist\/40{border-color:rgba(214,207,196,0.4)}
+.bg-mist\/50{background-color:rgba(214,207,196,0.5)}
+.text-mist\/50{color:rgba(214,207,196,0.5)}
+.border-mist\/50{border-color:rgba(214,207,196,0.5)}
+.bg-mist\/60{background-color:rgba(214,207,196,0.6)}
+.text-mist\/60{color:rgba(214,207,196,0.6)}
+.border-mist\/60{border-color:rgba(214,207,196,0.6)}
+.bg-mist\/70{background-color:rgba(214,207,196,0.7)}
+.text-mist\/70{color:rgba(214,207,196,0.7)}
+.border-mist\/70{border-color:rgba(214,207,196,0.7)}
+.bg-mist\/75{background-color:rgba(214,207,196,0.75)}
+.text-mist\/75{color:rgba(214,207,196,0.75)}
+.border-mist\/75{border-color:rgba(214,207,196,0.75)}
+.bg-mist\/80{background-color:rgba(214,207,196,0.8)}
+.text-mist\/80{color:rgba(214,207,196,0.8)}
+.border-mist\/80{border-color:rgba(214,207,196,0.8)}
+.bg-mist\/90{background-color:rgba(214,207,196,0.9)}
+.text-mist\/90{color:rgba(214,207,196,0.9)}
+.border-mist\/90{border-color:rgba(214,207,196,0.9)}
+.bg-mist\/95{background-color:rgba(214,207,196,0.95)}
+.text-mist\/95{color:rgba(214,207,196,0.95)}
+.border-mist\/95{border-color:rgba(214,207,196,0.95)}
+</style>
+<style>
+    #page-home { background-color: #F5F2EE; color: #1C1C1C; font-family: 'Source Sans 3', sans-serif; }
+    h1, h2, h3, .headline { font-family: 'Barlow Condensed', sans-serif; }
+    .hero-overlay { background: linear-gradient(to right, rgba(26,58,92,0.82) 0%, rgba(26,58,92,0.45) 60%, rgba(26,58,92,0.10) 100%); }
+    .texture-bg { background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%231A3A5C' fill-opacity='0.04'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E"); }
+    .service-card:hover { transform: translateY(-3px); transition: transform 0.25s ease; }
+    .example-badge {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: rgba(0,0,0,0.45);
+      color: #fff;
+      font-size: 1.1rem;
+      font-family: 'Source Sans 3', sans-serif;
+      font-weight: 600;
+      padding: 8px 22px;
+      border-radius: 6px;
+      letter-spacing: 0.08em;
+      pointer-events: none;
+      z-index: 10;
+      white-space: nowrap;
+  }</style>
+<style>
+    #page-about { font-family: 'Source Sans 3', sans-serif; background-color: #F5F2EE; color: #1C1C1C; }
+    h1, h2, h3, .font-headline { font-family: 'Barlow Condensed', sans-serif; }
+    .texture-bg { background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%231A3A5C' fill-opacity='0.04'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E"); }
+    .timeline-line::before { content: ''; position: absolute; left: 18px; top: 0; bottom: 0; width: 2px; background: linear-gradient(to bottom, #E8621A, #1A3A5C); }
+    .photo-beispiel-wrap { position: relative; }
+    .photo-beispiel-label {
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      pointer-events: none;
+      z-index: 10;
+    .photo-beispiel-label span {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 900;
+      font-size: 2.5rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.92);
+      text-shadow: 0 2px 16px rgba(26,58,92,0.55), 0 1px 2px rgba(0,0,0,0.4);
+  }}</style>
+<style>
+    #page-services { font-family: 'Source Sans 3', sans-serif; background-color: #F5F2EE; color: #1C1C1C; }
+    h1, h2, h3, h4 { font-family: 'Barlow Condensed', sans-serif; }
+    .texture-bg { background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%231A3A5C' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E"); }
+    .service-card:hover { transform: translateY(-3px); transition: transform 0.25s ease; }
+    .nav-link { font-family: 'Barlow Condensed', sans-serif; font-size: 1.05rem; font-weight: 600; letter-spacing: 0.04em; }
+    .example-overlay {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      pointer-events: none;
+    .example-overlay span {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 1.5rem;
+      font-weight: 700;
+      letter-spacing: 0.15em;
+      color: rgba(255,255,255,0.85);
+      text-transform: uppercase;
+      text-shadow: 0 1px 6px rgba(0,0,0,0.55);
+  }}</style>
+<style>
+    #page-contact { font-family: 'Source Sans 3', sans-serif; background-color: #F5F2EE; color: #1C1C1C; }
+    h1, h2, h3, .font-headline { font-family: 'Barlow Condensed', sans-serif; }
+    textarea, input, select { font-family: 'Source Sans 3', sans-serif; }
+    .texture-bg { background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%231A3A5C' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E"); }
+    .example-overlay {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: rgba(26, 58, 92, 0.45);
+      z-index: 10;
+    .example-overlay span {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 2rem;
+      font-weight: 800;
+      color: #fff;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      text-shadow: 0 2px 8px rgba(0,0,0,0.35);
+  }}</style>
+<style>* { box-sizing: border-box; } html, body { margin: 0; padding: 0; }</style>
+</head>
+<body>
+
+
+<!-- ═══════════════════════════════════════════════════
+     NAVIGATION
+═══════════════════════════════════════════════════ -->
+<nav class="fixed top-0 left-0 right-0 z-50 shadow-md" style="height:64px;background-color:#1A3A5C;">
+  <div class="max-w-7xl mx-auto px-4 h-full flex items-center justify-between">
+    <a href="index.html" class="flex items-center gap-2" style="line-height:1;">
+      <!-- INLINE SVG LOGO ENTWURF -->
+      <svg xmlns="http://www.w3.org/2000/svg" width="200" height="48" viewBox="0 0 200 48" aria-label="Schäffner Heizung und Sanitär Logo" role="img">
+        <!-- Hintergrund-Akzent: linker Balken copper -->
+        <rect x="0" y="8" width="4" height="32" fill="#E8621A"/>
+        <!-- Trennstrich -->
+        <rect x="12" y="10" width="1.5" height="28" fill="#E8621A" opacity="0.6"/>
+        <!-- Firmenname: SCHÄFFNER -->
+        <text x="20" y="24" font-family="Barlow Condensed, sans-serif" font-size="16" font-weight="800" fill="#ffffff" letter-spacing="0.08em">SCHÄFFNER</text>
+        <!-- Untertitel: HEIZUNG &amp; SANITÄR -->
+        <text x="20" y="39" font-family="Source Sans 3, sans-serif" font-size="9" font-weight="300" fill="#93b8d8" letter-spacing="0.18em">HEIZUNG &amp; SANITÄR</text>
+        <!-- Wärme-Symbol: stilisierte Flamme / Welle rechts -->
+        <path d="M180 14 C180 14 176 19 178 23 C179 26 182 26 182 23 C182 21 180 20 181 17 C182 21 185 22 185 26 C185 31 180 34 175 31 C171 29 171 24 174 20 C176 17 180 14 180 14 Z" fill="#E8621A" opacity="0.85"/>
+      </svg>
+      <span style="font-family:'Source Sans 3',sans-serif; font-size:9px; color:#6b8faa; font-weight:400; margin-left:4px; margin-top:28px; display:block; line-height:1;">(Entwurf)</span>
+    </a>
+    <div class="hidden md:flex items-center gap-6">
+      <a href="index.html" class="nav-link text-white hover:text-copper transition-colors">Start</a>
+      <a href="about.html" class="nav-link text-white hover:text-copper transition-colors">Über uns</a>
+      <a href="services.html" class="nav-link text-copper border-b-2 border-copper pb-0.5">Leistungen</a>
+      <a href="contact.html" class="nav-link text-white hover:text-copper transition-colors">Kontakt</a>
+      <a href="tel:0XXXXXX" class="ml-2 bg-copper text-white px-4 py-2 font-headline font-bold text-base tracking-wide hover:bg-orange-700 transition-colors flex items-center gap-2">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.948V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+        Jetzt anrufen
+      </a>
+    </div>
+    <a href="tel:0XXXXXX" class="md:hidden bg-copper text-white p-2.5 rounded" aria-label="Anrufen">
+      <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.948V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+    </a>
+  </div>
+</nav>
+
+<!-- ═══════════════════════════════════════════════════
+     NOTFALL-BANNER
+═══════════════════════════════════════════════════ -->
+<div class="bg-copper text-white py-2.5 px-4 text-center">
+  <span class="font-body text-sm font-600 tracking-wide">Notfall? Wir sind <strong>365 Tage im Jahr</strong> erreichbar – auch Wochenende und Feiertage. &nbsp;→&nbsp;</span>
+  <a href="tel:0XXXXXX" class="font-headline font-bold text-base underline underline-offset-2 hover:no-underline tracking-wide">0XXXX / XXXXX</a>
+</div>
+
+<!-- ═══════════════════════════════════════════════════
+     SECTION 1 — HERO
+═══════════════════════════════════════════════════ -->
+<section class="relative overflow-hidden" style="background-color:#1A3A5C;">
+  <div class="absolute inset-0" style="background:linear-gradient(135deg,#0f2338 0%,#1A3A5C 50%,#2a5a7a 100%);"></div>
+  <div class="absolute inset-0" style="background-image:repeating-linear-gradient(45deg,#E8621A 0,#E8621A 1px,transparent 0,transparent 50%);background-size:12px 12px;opacity:0.08;"></div>
+
+  <div class="relative z-10 max-w-7xl mx-auto px-6 py-24 md:py-32">
+    <div class="max-w-3xl">
+      <div class="flex items-center gap-3 mb-6">
+        <div class="w-10 h-0.5" style="background-color:#E8621A;"></div>
+        <span class="font-headline font-bold tracking-widest text-sm uppercase" style="color:#E8621A;">Meisterbetrieb seit 1995</span>
+      </div>
+      <h1 class="font-headline font-black leading-none mb-6" style="font-size:clamp(3rem,7vw,5.5rem);color:white;">
+        VON DER PLANUNG<br>
+        <span style="color:#E8621A;">BIS ZUR</span><br>
+        FERTIGSTELLUNG.
+      </h1>
+      <p class="font-body text-lg md:text-xl mb-10 max-w-xl leading-relaxed" style="color:rgba(255,255,255,0.85);">
+        Jede Heizungsanlage ist anders. Jedes Bad hat seine Geschichte. Wir kennen das Handwerk – und hören zuerst zu, bevor wir Werkzeug ansetzen.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4">
+        <a href="#heizung" class="font-headline font-bold text-lg tracking-wide px-8 py-4 inline-block text-center" style="background-color:#E8621A;color:white;">
+          Heizungsleistungen
+        </a>
+        <a href="#sanitaer" class="font-headline font-bold text-lg tracking-wide px-8 py-4 inline-block text-center" style="border:2px solid white;color:white;">
+          Sanitär &amp; Bad
+        </a>
+        <a href="contact.html" class="font-headline font-bold text-lg tracking-wide px-8 py-4 inline-flex items-center gap-2" style="color:#E8621A;">
+          Kontakt aufnehmen
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Anchor nav -->
+  <div class="relative z-10 border-t border-white/10">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="flex overflow-x-auto gap-0 scrollbar-hide">
+        <a href="#heizung" class="whitespace-nowrap font-headline font-bold text-sm tracking-widest uppercase py-4 px-6 border-r transition-colors" style="color:rgba(255,255,255,0.6);border-right-color:rgba(255,255,255,0.1);">Heizung</a>
+        <a href="#kundendienst" class="whitespace-nowrap font-headline font-bold text-sm tracking-widest uppercase py-4 px-6 border-r transition-colors" style="color:rgba(255,255,255,0.6);border-right-color:rgba(255,255,255,0.1);">Kundendienst</a>
+        <a href="#sanitaer" class="whitespace-nowrap font-headline font-bold text-sm tracking-widest uppercase py-4 px-6 border-r transition-colors" style="color:rgba(255,255,255,0.6);border-right-color:rgba(255,255,255,0.1);">Sanitär &amp; Bad</a>
+        <a href="#prozess" class="whitespace-nowrap font-headline font-bold text-sm tracking-widest uppercase py-4 px-6 transition-colors" style="color:rgba(255,255,255,0.6);">So arbeiten wir</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════
+     SECTION 2 — HEIZUNG
+═══════════════════════════════════════════════════ -->
+<section id="heizung" class="py-24 bg-cream texture-bg">
+  <div class="max-w-7xl mx-auto px-6">
+
+    <!-- Section header -->
+    <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
+      <div>
+        <div class="flex items-center gap-3 mb-3">
+          <div class="w-8 h-0.5 bg-copper"></div>
+          <span class="font-headline font-bold text-copper tracking-widest text-sm uppercase">01 — Heizung</span>
+        </div>
+        <h2 class="font-headline font-black text-navy leading-none" style="font-size: clamp(2.5rem, 5vw, 4rem);">
+          HEIZUNGSANLAGEN –<br>ZEITGEMÄSS UND SOLIDE.
+        </h2>
+      </div>
+      <p class="font-body text-gray-600 text-base max-w-sm leading-relaxed">
+        Egal ob moderner Wärmepumpen-Einbau oder die Wartung einer bestehenden Gasheizung – wir kennen alle Systeme und beraten Sie ohne Scheuklappen.
+      </p>
+    </div>
+
+    <!-- Featured: Wärmepumpen (large) + Gas/Öl -->
+    <div class="grid md:grid-cols-2 gap-6 mb-6">
+
+      <!-- Wärmepumpen — large card -->
+      <div class="service-card text-white p-10 relative overflow-hidden flex flex-col justify-between min-h-72" style="background-color:#1A3A5C;">
+        <div class="absolute top-0 right-0 w-32 h-32 bg-copper/10 rounded-bl-full"></div>
+        <div>
+          <div class="flex items-center gap-3 mb-5">
+            <div class="w-10 h-10 bg-copper/20 flex items-center justify-center">
+              <svg class="w-5 h-5 text-copper" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+            </div>
+            <h3 class="font-headline font-bold text-2xl tracking-wide text-white">WÄRMEPUMPEN</h3>
+          </div>
+          <p class="font-body text-white/75 leading-relaxed mb-6">
+            Luft-Wasser, Sole-Wasser oder Wasser-Wasser – Wärmepumpen sind heute ausgereift und wirtschaftlich. Wir planen, installieren und warten Ihre Anlage fachgerecht. Vor der Entscheidung prüfen wir, welches System zu Ihrem Gebäude wirklich passt.
+          </p>
+        </div>
+        <!-- Foto -->
+        <div class="w-full h-40 relative overflow-hidden mt-2">
+          <img
+            src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=80&fit=crop"
+            alt="Wärmepumpe Außeneinheit">
+        </div>
+        <div class="mt-6 flex items-center gap-2 text-copper font-headline font-bold text-sm tracking-widest uppercase">
+          <a href="contact.html" class="hover:underline">Beratung anfragen</a>
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+        </div>
+      </div>
+
+      <!-- Right column: Gas + Öl stacked -->
+      <div class="flex flex-col gap-6">
+        <!-- Gas -->
+        <div class="service-card bg-sand p-8 relative overflow-hidden flex-1">
+          <div class="flex items-start gap-4 mb-4">
+            <div class="w-10 h-10 flex items-center justify-center flex-shrink-0" style="background-color:#1A3A5C;border-radius:0.375rem;">
+              <svg class="w-5 h-5 text-copper" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z"/></svg>
+            </div>
+            <div>
+              <h3 class="font-headline font-bold text-navy text-xl tracking-wide">GAS &amp; GASBRENNWERT</h3>
+              <div class="w-8 h-0.5 bg-copper mt-1"></div>
+            </div>
+          </div>
+          <p class="font-body text-gray-700 text-sm leading-relaxed">
+            Gasbrennwert-Heizungen nutzen die Energie des Abgases und senken damit den Verbrauch deutlich. Wir installieren Neuanlagen und tauschen veraltete Heizkessel durch moderne, effiziente Geräte aus.
+          </p>
+        </div>
+        <!-- Öl -->
+        <div class="service-card bg-sand p-8 relative overflow-hidden flex-1">
+          <div class="flex items-start gap-4 mb-4">
+            <div class="w-10 h-10 flex items-center justify-center flex-shrink-0" style="background-color:#1A3A5C;border-radius:0.375rem;">
+              <svg class="w-5 h-5 text-copper" fill="none" stroke="currentColor" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3" stroke-width="2"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 2v3M12 19v3M4.22 4.22l2.12 2.12M17.66 17.66l2.12 2.12M2 12h3M19 12h3M4.22 19.78l2.12-2.12M17.66 6.34l2.12-2.12"/></svg>
+            </div>
+            <div>
+              <h3 class="font-headline font-bold text-navy text-xl tracking-wide">ÖL &amp; ÖLBRENNWERT</h3>
+              <div class="w-8 h-0.5 bg-copper mt-1"></div>
+            </div>
+          </div>
+          <p class="font-body text-gray-700 text-sm leading-relaxed">
+            Ölbrennwert-Heizungen sind langlebig und robust. Ob Neuinstallation oder Umrüstung auf eine effizientere Anlage – wir kennen diese Systeme seit Jahrzehnten und sorgen für zuverlässigen Betrieb.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Row: Solar + Pellets + Pflanzenöl -->
+    <div class="grid md:grid-cols-3 gap-6 mb-6">
+
+      <!-- Solar -->
+      <div class="service-card bg-white border border-mist p-8">
+        <div class="w-full h-36 relative overflow-hidden mb-6 border border-mist">
+          <img
+            src="https://images.unsplash.com/photo-1509391366360-2e959784a276?w=600&q=80&fit=crop"
+            alt="Solarkollektor auf Hausdach">
+        </div>
+        <div class="flex items-center gap-3 mb-3">
+          <div class="w-8 h-8 bg-copper/15 flex items-center justify-center">
+            <svg class="w-4 h-4 text-copper" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364-6.364l-.707.707M6.343 17.657l-.707.707m12.728 0l-.707-.707M6.343 6.343l-.707-.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"/></svg>
+          </div>
+          <h3 class="font-headline font-bold text-navy text-xl tracking-wide">SOLAR</h3>
+        </div>
+        <p class="font-body text-gray-600 text-sm leading-relaxed">
+          Thermische Solaranlagen zur Warmwasserbereitung oder Heizungsunterstützung. Sinnvoll geplant und korrekt installiert, leisten sie über Jahrzehnte ihren Dienst.
+        </p>
+      </div>
+
+      <!-- Holz/Pellets -->
+      <div class="service-card text-white p-8" style="background-color:#1A3A5C;">
+        <div class="w-full h-36 relative overflow-hidden mb-6">
+          <img
+            src="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?w=600&q=80&fit=crop"
+            alt="Holzpellets">
+        </div>
+        <div class="flex items-center gap-3 mb-3">
+          <div class="w-8 h-8 bg-copper/20 flex items-center justify-center">
+            <svg class="w-4 h-4 text-copper" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 18.657A8 8 0 016.343 7.343S7 9 9 10c0-2 .5-5 2.986-7C14 5 16.09 5.777 17.656 7.343A7.975 7.975 0 0120 13a7.975 7.975 0 01-2.343 5.657z"/></svg>
+          </div>
+          <h3 class="font-headline font-bold text-white text-xl tracking-wide">HOLZ &amp; HOLZPELLETS</h3>
+        </div>
+        <p class="font-body text-white/75 text-sm leading-relaxed">
+          Pelletsheizungen und Holzkessel kombinieren heimische Ressourcen mit moderner Anlagentechnik. Wir installieren und warten Ihre Holzheizung zuverlässig – inklusive Fördermittelberatung.
+        </p>
+      </div>
+
+      <!-- Pflanzenöl -->
+      <div class="service-card border-2 border-copper p-8" style="background:#fffaf6;">
+        <div class="flex items-center gap-2 mb-4">
+          <span class="bg-copper text-white font-headline font-bold text-xs tracking-widest uppercase px-3 py-1">Spezialist</span>
+        </div>
+        <div class="w-full h-36 relative overflow-hidden mb-6 border border-orange-100">
+          <img
+            src="https://images.unsplash.com/photo-1474625342403-1e3958f5947c?w=600&q=80&fit=crop"
+            alt="Pflanzenöl Brenner">
+        </div>
+        <div class="flex items-center gap-3 mb-3">
+          <div class="w-8 h-8 bg-copper/15 flex items-center justify-center">
+            <svg class="w-4 h-4 text-copper" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"/></svg>
+          </div>
+          <h3 class="font-headline font-bold text-navy text-xl tracking-wide">PFLANZENÖL</h3>
+        </div>
+        <p class="font-body text-gray-700 text-sm leading-relaxed"></p>
+      </div>
+    </div>
+
+  </div>
+</section>
+</body>
+</html>
