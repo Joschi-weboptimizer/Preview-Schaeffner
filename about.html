@@ -460,44 +460,13 @@
     .texture-bg { background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%231A3A5C' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E"); }
     .service-card:hover { transform: translateY(-3px); transition: transform 0.25s ease; }
     .nav-link { font-family: 'Barlow Condensed', sans-serif; font-size: 1.05rem; font-weight: 600; letter-spacing: 0.04em; }
-    .example-overlay {
-      position: absolute;
-      inset: 0;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      pointer-events: none;
-    .example-overlay span {
-      font-family: 'Barlow Condensed', sans-serif;
-      font-size: 1.5rem;
-      font-weight: 700;
-      letter-spacing: 0.15em;
-      color: rgba(255,255,255,0.85);
-      text-transform: uppercase;
-      text-shadow: 0 1px 6px rgba(0,0,0,0.55);
-  }}</style>
+  </style>
 <style>
     #page-contact { font-family: 'Source Sans 3', sans-serif; background-color: #F5F2EE; color: #1C1C1C; }
     h1, h2, h3, .font-headline { font-family: 'Barlow Condensed', sans-serif; }
     textarea, input, select { font-family: 'Source Sans 3', sans-serif; }
     .texture-bg { background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%231A3A5C' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E"); }
-    .example-overlay {
-      position: absolute;
-      inset: 0;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background: rgba(26, 58, 92, 0.45);
-      z-index: 10;
-    .example-overlay span {
-      font-family: 'Barlow Condensed', sans-serif;
-      font-size: 2rem;
-      font-weight: 800;
-      color: #fff;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      text-shadow: 0 2px 8px rgba(0,0,0,0.35);
-  }}</style>
+  </style>
 <style>* { box-sizing: border-box; } html, body { margin: 0; padding: 0; }</style>
 </head>
 <body>
@@ -507,13 +476,9 @@
 <nav style="position:fixed;top:0;left:0;right:0;z-index:9999;background:rgba(26,58,92,0.97);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-bottom:1px solid rgba(232,98,26,0.18);padding:0 32px;height:64px;display:flex;align-items:center;justify-content:space-between;">
   <div style="display:flex;flex-direction:column;align-items:flex-start;gap:0;">
     <svg xmlns="http://www.w3.org/2000/svg" width="200" height="48" viewBox="0 0 200 48" aria-label="Alexander Schäffner Heizung und Sanitär">
-      <!-- Vertical divider accent -->
       <rect x="42" y="10" width="2" height="28" fill="#E8621A" opacity="0.5"/>
-      <!-- Wordmark: SCHÄFFNER -->
       <text x="50" y="24" font-family="Barlow Condensed, sans-serif" font-weight="900" font-size="17" fill="white" letter-spacing="1.5">SCHÄFFNER</text>
-      <!-- Sub-line: Heizung · Sanitär -->
       <text x="50" y="38" font-family="Barlow Condensed, sans-serif" font-weight="600" font-size="10.5" fill="#E8621A" letter-spacing="2.5">HEIZUNG · SANITÄR</text>
-      <!-- Meisterbetrieb badge: small pill -->
       <rect x="50" y="41" width="72" height="5" fill="none"/>
     </svg>
     <span style="font-family:'Source Sans 3',sans-serif;font-size:0.6rem;color:rgba(255,255,255,0.35);letter-spacing:0.5px;margin-top:-4px;padding-left:50px;">(Entwurf)</span>
@@ -527,7 +492,7 @@
 </nav>
 
 <!-- ═══════════════════════════════════════════════
-     HERO — Mission & Philosophy
+     HERO
 ═══════════════════════════════════════════════ -->
 <section class="relative overflow-hidden bg-navy texture-bg">
   <div class="absolute inset-0 opacity-20">
@@ -537,7 +502,6 @@
   <div class="relative max-w-7xl mx-auto px-6 lg:px-12 py-20 lg:py-32">
     <div class="grid lg:grid-cols-12 gap-12 items-end">
 
-      <!-- Left: Text -->
       <div class="lg:col-span-7">
         <div class="flex items-center gap-3 mb-8">
           <div class="w-8 h-px bg-copper"></div>
@@ -553,7 +517,6 @@
         </p>
       </div>
 
-      <!-- Right: Accent block -->
       <div class="lg:col-span-5">
         <div class="relative">
           <div class="bg-copper p-8 lg:p-10">
@@ -573,26 +536,22 @@
 </section>
 
 <!-- ═══════════════════════════════════════════════
-     STORY — Editorial layout with photo + narrative
+     STORY
 ═══════════════════════════════════════════════ -->
 <section class="max-w-7xl mx-auto px-6 lg:px-12 py-20 lg:py-28">
   <div class="grid lg:grid-cols-12 gap-12 lg:gap-20 items-start">
 
-    <!-- Photo column -->
     <div class="lg:col-span-5">
       <div class="relative">
         <div class="bg-cream-dark aspect-[4/5] relative overflow-hidden photo-beispiel-wrap" style="background-color:#DDD8D0;">
           <img src="https://images.unsplash.com/photo-1621905251918-48416bd8575a?w=800&q=80" alt="Beispielfoto: Sanitär- und Heizungshandwerker bei der Arbeit" class="w-full h-full object-cover">
           <div class="photo-beispiel-label"><span>Beispiel</span></div>
-          <!-- Overlay label -->
           <div class="absolute bottom-0 left-0 right-0 bg-navy p-4" style="z-index:20;">
             <p class="font-headline font-bold text-white text-lg uppercase tracking-wide">Alexander Schäffner</p>
             <p class="font-body text-copper text-sm">Inhaber &amp; Meister SHK</p>
           </div>
         </div>
-        <!-- Decorative offset block -->
         <div class="absolute -top-4 -left-4 w-16 h-16 border-2 border-copper opacity-50"></div>
-        <!-- Founding year badge -->
         <div class="absolute -right-4 -bottom-4 bg-navy text-white py-3 px-5 shadow-lg">
           <p class="font-headline font-black text-3xl leading-none text-copper">1995</p>
           <p class="font-body text-xs text-blue-200 tracking-widest uppercase">Gegründet</p>
@@ -600,7 +559,6 @@
       </div>
     </div>
 
-    <!-- Story text column -->
     <div class="lg:col-span-7">
       <div class="flex items-center gap-3 mb-6">
         <div class="w-8 h-px bg-copper"></div>
@@ -608,18 +566,18 @@
       </div>
 
       <h2 class="font-headline font-black text-navy leading-tight mb-8" style="font-size: clamp(2rem, 4vw, 3rem);">
-        NICHT WEIL ES EINFACH IST –<br>SONDERN WEIL ES STIMMT.
+        GEGRÜNDET 1995 IN RETTIGHEIM.<br>GEWACHSEN DURCH WEITEREMPFEHLUNG.
       </h2>
 
       <div class="space-y-5 font-body text-ink text-base leading-relaxed" style="font-weight:400;">
         <p>
-          Alexander Schäffner gründete seinen Meisterbetrieb 1995 aus einer schlichten Überzeugung: Gutes Handwerk braucht keinen großen Auftritt, es braucht verlässliche Menschen und ehrliche Arbeit. Was als Einzelbetrieb begann, ist heute ein eingespielter Betrieb, der in der Region bekannt ist – nicht durch Werbung, sondern durch Weiterempfehlung.
+          Alexander Schäffner gründete seinen Betrieb 1995 mit einer schlichten Vorstellung davon, wie Handwerk funktionieren sollte: ankommen, zuhören, sauber arbeiten, fertig werden. Was klein begann, ist heute ein eingespielte Firma, die in Rettigheim und Umgebung bekannt ist – nicht durch Werbung, sondern weil Kunden andere Kunden schicken.
         </p>
         <p>
-          Die Meisterprüfung ist für Alexander Schäffner kein Rahmen an der Wand. Sie ist eine tägliche Verpflichtung: gegenüber den Kunden, gegenüber der Qualität, gegenüber dem Berufsstand. Wer einen Meisterbetrieb beauftragt, bekommt jemanden, der für seine Arbeit haftet – persönlich und handwerklich.
+          Die Meisterprüfung hängt nicht gerahmt im Büro. Sie zeigt sich darin, wie gearbeitet wird: jede Lötstelle, jede Rohrführung, jeder Anschluss. Wer einen Meisterbetrieb beauftragt, bekommt jemanden, der persönlich für das einsteht, was er gebaut hat.
         </p>
         <p>
-          Über 29 Jahre lang hat sich die Technik verändert: von der einfachen Gasheizung zu Wärmepumpen, Pelletkesseln, Solaranlagen und modernen Brennwertsystemen. Was sich nicht verändert hat: Wenn das Wasser kalt bleibt oder die Heizung ausfällt, ist einer da. An 365 Tagen im Jahr.
+          Die Technik hat sich in 29 Jahren grundlegend verändert. Früher war es die einfache Gasheizung. Heute kommen Wärmepumpen, Pelletkessel und Solaranlagen dazu. Was gleich geblieben ist: Wenn das Wasser kalt bleibt oder die Heizung ausfällt, ist einer da. An 365 Tagen im Jahr, auch samstags, auch im Januar.
         </p>
       </div>
 
@@ -638,7 +596,7 @@
 </section>
 
 <!-- ═══════════════════════════════════════════════
-     TIMELINE — Visual milestones
+     TIMELINE
 ═══════════════════════════════════════════════ -->
 <section class="bg-cream-dark texture-bg py-20 lg:py-28">
   <div class="max-w-7xl mx-auto px-6 lg:px-12">
@@ -653,14 +611,13 @@
           29 JAHRE IN<br>MEILENSTEINEN.
         </h2>
         <p class="font-body text-ink leading-relaxed" style="font-weight:300;">
-          Nicht jedes Jahr bringt ein großes Ereignis. Aber manche Jahre prägen einen Betrieb für immer. Hier die wichtigsten Stationen.
+          Nicht jedes Jahr bringt eine große Veränderung. Aber manche Entscheidungen prägen einen Betrieb dauerhaft. Hier die wichtigsten Stationen seit der Gründung.
         </p>
       </div>
 
       <div class="lg:col-span-8">
         <div class="relative timeline-line pl-14 space-y-10">
 
-          <!-- 1995 -->
           <div class="relative">
             <div class="absolute left-0 w-9 h-9 bg-copper rounded-full flex items-center justify-center shadow-md" style="top:2px; margin-left:-4.5px;">
               <div class="w-3 h-3 bg-white rounded-full"></div>
@@ -668,15 +625,14 @@
             <div class="bg-white p-6 shadow-sm border-l-4 border-copper">
               <div class="flex items-baseline gap-4 mb-2">
                 <span class="font-headline font-black text-copper text-2xl">1995</span>
-                <span class="font-headline font-semibold text-navy text-lg uppercase tracking-wide">Gründung des Betriebs</span>
+                <span class="font-headline font-semibold text-navy text-lg uppercase tracking-wide">Gründung in Rettigheim</span>
               </div>
               <p class="font-body text-ink text-sm leading-relaxed" style="font-weight:300;">
-                Alexander Schäffner meldet seinen Meisterbetrieb für Heizung und Sanitär an. Der Grundsatz von Anfang an: persönlich, verlässlich, ohne Umwege.
+                Alexander Schäffner meldet seinen Meisterbetrieb für Heizung und Sanitär an. Erster Auftrag, erste Stammkunden – und von Anfang an keine Subunternehmer, keine Weitervermittlung.
               </p>
             </div>
           </div>
 
-          <!-- 2000 -->
           <div class="relative">
             <div class="absolute left-0 w-9 h-9 bg-navy rounded-full flex items-center justify-center shadow-md" style="top:2px; margin-left:-4.5px;">
               <div class="w-3 h-3 bg-copper rounded-full"></div>
@@ -684,15 +640,14 @@
             <div class="bg-white p-6 shadow-sm border-l-4 border-navy">
               <div class="flex items-baseline gap-4 mb-2">
                 <span class="font-headline font-black text-navy text-2xl">2000</span>
-                <span class="font-headline font-semibold text-navy text-lg uppercase tracking-wide">Erste Mitarbeiter, mehr Kapazität</span>
+                <span class="font-headline font-semibold text-navy text-lg uppercase tracking-wide">Erstes festes Team</span>
               </div>
               <p class="font-body text-ink text-sm leading-relaxed" style="font-weight:300;">
-                Der Betrieb wächst. Das erste feste Team entsteht – und damit die Fähigkeit, mehrere Projekte gleichzeitig zuverlässig umzusetzen.
+                Der Betrieb wächst. Mit dem ersten festen Mitarbeiter wird es möglich, mehrere Baustellen gleichzeitig zu betreuen – ohne an Verlässlichkeit einzubüßen.
               </p>
             </div>
           </div>
 
-          <!-- 2010 -->
           <div class="relative">
             <div class="absolute left-0 w-9 h-9 bg-copper rounded-full flex items-center justify-center shadow-md" style="top:2px; margin-left:-4.5px;">
               <div class="w-3 h-3 bg-white rounded-full"></div>
@@ -700,15 +655,14 @@
             <div class="bg-white p-6 shadow-sm border-l-4 border-copper">
               <div class="flex items-baseline gap-4 mb-2">
                 <span class="font-headline font-black text-copper text-2xl">2010</span>
-                <span class="font-headline font-semibold text-navy text-lg uppercase tracking-wide">Spezialisierung erneuerbare Heizung</span>
+                <span class="font-headline font-semibold text-navy text-lg uppercase tracking-wide">Erneuerbare Heizsysteme</span>
               </div>
               <p class="font-body text-ink text-sm leading-relaxed" style="font-weight:300;">
-                Pelletkessel, Solarthermie, Pflanzenöl-Heizung: Der Betrieb erweitert sein Know-how gezielt in Richtung alternativer Heizsysteme – ohne den klassischen Service aufzugeben.
+                Pelletkessel, Solarthermie, Pflanzenöl-Heizung: Der Betrieb bildet sich gezielt weiter und installiert ab jetzt auch alternative Systeme – neben dem klassischen Heizungs- und Sanitärservice.
               </p>
             </div>
           </div>
 
-          <!-- 2020 -->
           <div class="relative">
             <div class="absolute left-0 w-9 h-9 bg-navy rounded-full flex items-center justify-center shadow-md" style="top:2px; margin-left:-4.5px;">
               <div class="w-3 h-3 bg-copper rounded-full"></div>
@@ -716,15 +670,14 @@
             <div class="bg-white p-6 shadow-sm border-l-4 border-navy">
               <div class="flex items-baseline gap-4 mb-2">
                 <span class="font-headline font-black text-navy text-2xl">2020</span>
-                <span class="font-headline font-semibold text-navy text-lg uppercase tracking-wide">Wärmepumpen-Technik ausgebaut</span>
+                <span class="font-headline font-semibold text-navy text-lg uppercase tracking-wide">Wärmepumpen-Qualifikation</span>
               </div>
               <p class="font-body text-ink text-sm leading-relaxed" style="font-weight:300;">
-                Neue Qualifikationen, neue Systeme. Der Betrieb installiert und wartet jetzt Wärmepumpen nach aktuellem Stand der Technik – inklusive hydraulischem Abgleich und Förderberatung.
+                Neue Zertifikate, neue Anlagen. Der Betrieb installiert und wartet jetzt Wärmepumpen nach aktuellem Stand der Technik – inklusive hydraulischem Abgleich und Förderberatung nach BEG.
               </p>
             </div>
           </div>
 
-          <!-- 2024 -->
           <div class="relative">
             <div class="absolute left-0 w-9 h-9 bg-copper rounded-full flex items-center justify-center shadow-md" style="top:2px; margin-left:-4.5px;">
               <div class="w-3 h-3 bg-white rounded-full"></div>
@@ -732,10 +685,10 @@
             <div class="bg-navy p-6 shadow-sm">
               <div class="flex items-baseline gap-4 mb-2">
                 <span class="font-headline font-black text-copper text-2xl">2024</span>
-                <span class="font-headline font-semibold text-white text-lg uppercase tracking-wide">29 Jahre – und kein Ende in Sicht</span>
+                <span class="font-headline font-semibold text-white text-lg uppercase tracking-wide">29 Jahre – der Betrieb läuft</span>
               </div>
               <p class="font-body text-blue-100 text-sm leading-relaxed" style="font-weight:300;">
-                Fast drei Jahrzehnte Erfahrung, hunderte zufriedene Kunden in der Region, 365-Tage-Service. Der Betrieb steht heute stärker da als je zuvor.
+                Fast drei Jahrzehnte, hunderte Anlagen in der Region, 365-Tage-Erreichbarkeit. Die meisten Kunden kommen seit Jahren – manche schicken ihre Kinder.
               </p>
             </div>
           </div>
@@ -748,7 +701,7 @@
 </section>
 
 <!-- ═══════════════════════════════════════════════
-     MEISTERBETRIEB — What it means
+     MEISTERBETRIEB
 ═══════════════════════════════════════════════ -->
 <section class="max-w-7xl mx-auto px-6 lg:px-12 py-20 lg:py-28">
   <div class="grid lg:grid-cols-12 gap-12 items-center">
@@ -759,10 +712,10 @@
         <span class="font-body text-copper text-sm font-semibold tracking-widest uppercase">Meisterbetrieb</span>
       </div>
       <h2 class="font-headline font-black text-navy leading-tight mb-6" style="font-size: clamp(2rem, 4vw, 3rem);">
-        WAS DER MEISTERTITEL<br>FÜR SIE BEDEUTET.
+        WAS DER MEISTERTITEL<br>KONKRET BEDEUTET.
       </h2>
       <p class="font-body text-ink leading-relaxed mb-6" style="font-weight:300;">
-        Der Meistertitel ist kein Marketinginstrument. Er ist eine rechtlich geregelte Qualifikationsstufe, die echte Konsequenzen für Sie als Kunde hat:
+        Der Meistertitel ist kein Marketingbegriff. Er ist eine rechtlich geregelte Qualifikationsstufe – mit echten Konsequenzen für Sie als Kunde:
       </p>
 
       <div class="space-y-4">
@@ -772,7 +725,7 @@
           </div>
           <div>
             <p class="font-body font-semibold text-navy text-base">Ausbildungsrecht</p>
-            <p class="font-body text-ink text-sm leading-relaxed mt-1" style="font-weight:300;">Nur Meisterbetriebe dürfen im Handwerk ausbilden. Das sichert die Qualität des Berufsnachwuchses.</p>
+            <p class="font-body text-ink text-sm leading-relaxed mt-1" style="font-weight:300;">Nur Meisterbetriebe dürfen im zulassungspflichtigen Handwerk ausbilden. Das sichert den Nachwuchs – und zeigt, dass hier jemand langfristig denkt.</p>
           </div>
         </div>
         <div class="flex gap-4 items-start">
@@ -780,8 +733,8 @@
             <svg class="w-3 h-3 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/></svg>
           </div>
           <div>
-            <p class="font-body font-semibold text-navy text-base">Qualitätsgarantie</p>
-            <p class="font-body text-ink text-sm leading-relaxed mt-1" style="font-weight:300;">Der Meister steht persönlich für seine Arbeit. Keine Anonymität, keine Weitergabe an Subunternehmer ohne Aufsicht.</p>
+            <p class="font-body font-semibold text-navy text-base">Persönliche Verantwortung</p>
+            <p class="font-body text-ink text-sm leading-relaxed mt-1" style="font-weight:300;">Der Meister steht mit seinem Namen für die Arbeit. Keine Anonymität, keine Weiterleitung an Dritte ohne direkte Aufsicht.</p>
           </div>
         </div>
         <div class="flex gap-4 items-start">
@@ -789,8 +742,8 @@
             <svg class="w-3 h-3 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/></svg>
           </div>
           <div>
-            <p class="font-body font-semibold text-navy text-base">Vollständige Haftung</p>
-            <p class="font-body text-ink text-sm leading-relaxed mt-1" style="font-weight:300;">Mängel werden behoben. Ohne Diskussion. Die Betriebshaftpflicht eines Meisterbetriebs ist kein Bonus – sie ist Pflicht.</p>
+            <p class="font-body font-semibold text-navy text-base">Haftung ohne Ausrede</p>
+            <p class="font-body text-ink text-sm leading-relaxed mt-1" style="font-weight:300;">Mängel werden behoben. Die Betriebshaftpflicht eines eingetragenen Meisterbetriebs ist Pflicht, kein Bonus.</p>
           </div>
         </div>
         <div class="flex gap-4 items-start">
@@ -799,7 +752,7 @@
           </div>
           <div>
             <p class="font-body font-semibold text-navy text-base">Eintrag in der Handwerksrolle</p>
-            <p class="font-body text-ink text-sm leading-relaxed mt-1" style="font-weight:300;">Überprüfbar, nachvollziehbar, transparent. Kein Graubetrieb, keine Schwarzarbeit – eingetragen und geprüft.</p>
+            <p class="font-body text-ink text-sm leading-relaxed mt-1" style="font-weight:300;">Überprüfbar, öffentlich, transparent. Kein Graubetrieb, keine Schwarzarbeit – eingetragen und geprüft bei der Handwerkskammer.</p>
           </div>
         </div>
       </div>
@@ -811,7 +764,6 @@
           <img src="https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=800&q=80" alt="Beispielfoto: Handwerkliches Detail – Kupferrohr und Werkzeug" class="w-full h-full object-cover">
           <div class="photo-beispiel-label"><span>Beispiel</span></div>
         </div>
-        <!-- Accent -->
         <div class="absolute -bottom-6 -right-6 bg-copper text-white p-6 shadow-xl" style="z-index:20;">
           <p class="font-headline font-black text-4xl leading-none">M</p>
         </div>
