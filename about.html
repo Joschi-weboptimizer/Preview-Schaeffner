@@ -1,533 +1,169 @@
-<!DOCTYPE html>
-<html lang="de">
-<head>
-<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;800;900&family=Source+Sans+3:wght@300;400;500;600&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800;900&family=Source+Sans+3:wght@300;400;500;600&display=swap" rel="stylesheet">
-<script>tailwind.config={theme:{extend:{colors:{"navy":"#1A3A5C","copper":"#E8621A","cream":"#F5F2EE","ink":"#1C1C1C","cream-dark":"#EDE9E3","navy-light":"#2a5080","sand":"#EAE4DB","mist":"#D6CFC4"},fontFamily:{"headline":["Barlow Condensed","sans-serif"],"body":["Source Sans 3","sans-serif"]}}}}</script>
-<script src="https://cdn.tailwindcss.com"></script>
-<style>
-.bg-navy{background-color:#1A3A5C}
-.text-navy{color:#1A3A5C}
-.border-navy{border-color:#1A3A5C}
-.fill-navy{fill:#1A3A5C}
-.ring-navy{--tw-ring-color:#1A3A5C}
-.from-navy{--tw-gradient-from:#1A3A5C;--tw-gradient-stops:var(--tw-gradient-from),var(--tw-gradient-to,rgba(26,58,92,0))}
-.to-navy{--tw-gradient-to:#1A3A5C}
-.via-navy{--tw-gradient-stops:var(--tw-gradient-from),#1A3A5C,var(--tw-gradient-to,rgba(26,58,92,0))}
-.bg-navy\/5{background-color:rgba(26,58,92,0.05)}
-.text-navy\/5{color:rgba(26,58,92,0.05)}
-.border-navy\/5{border-color:rgba(26,58,92,0.05)}
-.bg-navy\/10{background-color:rgba(26,58,92,0.1)}
-.text-navy\/10{color:rgba(26,58,92,0.1)}
-.border-navy\/10{border-color:rgba(26,58,92,0.1)}
-.bg-navy\/15{background-color:rgba(26,58,92,0.15)}
-.text-navy\/15{color:rgba(26,58,92,0.15)}
-.border-navy\/15{border-color:rgba(26,58,92,0.15)}
-.bg-navy\/20{background-color:rgba(26,58,92,0.2)}
-.text-navy\/20{color:rgba(26,58,92,0.2)}
-.border-navy\/20{border-color:rgba(26,58,92,0.2)}
-.bg-navy\/25{background-color:rgba(26,58,92,0.25)}
-.text-navy\/25{color:rgba(26,58,92,0.25)}
-.border-navy\/25{border-color:rgba(26,58,92,0.25)}
-.bg-navy\/30{background-color:rgba(26,58,92,0.3)}
-.text-navy\/30{color:rgba(26,58,92,0.3)}
-.border-navy\/30{border-color:rgba(26,58,92,0.3)}
-.bg-navy\/40{background-color:rgba(26,58,92,0.4)}
-.text-navy\/40{color:rgba(26,58,92,0.4)}
-.border-navy\/40{border-color:rgba(26,58,92,0.4)}
-.bg-navy\/50{background-color:rgba(26,58,92,0.5)}
-.text-navy\/50{color:rgba(26,58,92,0.5)}
-.border-navy\/50{border-color:rgba(26,58,92,0.5)}
-.bg-navy\/60{background-color:rgba(26,58,92,0.6)}
-.text-navy\/60{color:rgba(26,58,92,0.6)}
-.border-navy\/60{border-color:rgba(26,58,92,0.6)}
-.bg-navy\/70{background-color:rgba(26,58,92,0.7)}
-.text-navy\/70{color:rgba(26,58,92,0.7)}
-.border-navy\/70{border-color:rgba(26,58,92,0.7)}
-.bg-navy\/75{background-color:rgba(26,58,92,0.75)}
-.text-navy\/75{color:rgba(26,58,92,0.75)}
-.border-navy\/75{border-color:rgba(26,58,92,0.75)}
-.bg-navy\/80{background-color:rgba(26,58,92,0.8)}
-.text-navy\/80{color:rgba(26,58,92,0.8)}
-.border-navy\/80{border-color:rgba(26,58,92,0.8)}
-.bg-navy\/90{background-color:rgba(26,58,92,0.9)}
-.text-navy\/90{color:rgba(26,58,92,0.9)}
-.border-navy\/90{border-color:rgba(26,58,92,0.9)}
-.bg-navy\/95{background-color:rgba(26,58,92,0.95)}
-.text-navy\/95{color:rgba(26,58,92,0.95)}
-.border-navy\/95{border-color:rgba(26,58,92,0.95)}
-.bg-copper{background-color:#E8621A}
-.text-copper{color:#E8621A}
-.border-copper{border-color:#E8621A}
-.fill-copper{fill:#E8621A}
-.ring-copper{--tw-ring-color:#E8621A}
-.from-copper{--tw-gradient-from:#E8621A;--tw-gradient-stops:var(--tw-gradient-from),var(--tw-gradient-to,rgba(232,98,26,0))}
-.to-copper{--tw-gradient-to:#E8621A}
-.via-copper{--tw-gradient-stops:var(--tw-gradient-from),#E8621A,var(--tw-gradient-to,rgba(232,98,26,0))}
-.bg-copper\/5{background-color:rgba(232,98,26,0.05)}
-.text-copper\/5{color:rgba(232,98,26,0.05)}
-.border-copper\/5{border-color:rgba(232,98,26,0.05)}
-.bg-copper\/10{background-color:rgba(232,98,26,0.1)}
-.text-copper\/10{color:rgba(232,98,26,0.1)}
-.border-copper\/10{border-color:rgba(232,98,26,0.1)}
-.bg-copper\/15{background-color:rgba(232,98,26,0.15)}
-.text-copper\/15{color:rgba(232,98,26,0.15)}
-.border-copper\/15{border-color:rgba(232,98,26,0.15)}
-.bg-copper\/20{background-color:rgba(232,98,26,0.2)}
-.text-copper\/20{color:rgba(232,98,26,0.2)}
-.border-copper\/20{border-color:rgba(232,98,26,0.2)}
-.bg-copper\/25{background-color:rgba(232,98,26,0.25)}
-.text-copper\/25{color:rgba(232,98,26,0.25)}
-.border-copper\/25{border-color:rgba(232,98,26,0.25)}
-.bg-copper\/30{background-color:rgba(232,98,26,0.3)}
-.text-copper\/30{color:rgba(232,98,26,0.3)}
-.border-copper\/30{border-color:rgba(232,98,26,0.3)}
-.bg-copper\/40{background-color:rgba(232,98,26,0.4)}
-.text-copper\/40{color:rgba(232,98,26,0.4)}
-.border-copper\/40{border-color:rgba(232,98,26,0.4)}
-.bg-copper\/50{background-color:rgba(232,98,26,0.5)}
-.text-copper\/50{color:rgba(232,98,26,0.5)}
-.border-copper\/50{border-color:rgba(232,98,26,0.5)}
-.bg-copper\/60{background-color:rgba(232,98,26,0.6)}
-.text-copper\/60{color:rgba(232,98,26,0.6)}
-.border-copper\/60{border-color:rgba(232,98,26,0.6)}
-.bg-copper\/70{background-color:rgba(232,98,26,0.7)}
-.text-copper\/70{color:rgba(232,98,26,0.7)}
-.border-copper\/70{border-color:rgba(232,98,26,0.7)}
-.bg-copper\/75{background-color:rgba(232,98,26,0.75)}
-.text-copper\/75{color:rgba(232,98,26,0.75)}
-.border-copper\/75{border-color:rgba(232,98,26,0.75)}
-.bg-copper\/80{background-color:rgba(232,98,26,0.8)}
-.text-copper\/80{color:rgba(232,98,26,0.8)}
-.border-copper\/80{border-color:rgba(232,98,26,0.8)}
-.bg-copper\/90{background-color:rgba(232,98,26,0.9)}
-.text-copper\/90{color:rgba(232,98,26,0.9)}
-.border-copper\/90{border-color:rgba(232,98,26,0.9)}
-.bg-copper\/95{background-color:rgba(232,98,26,0.95)}
-.text-copper\/95{color:rgba(232,98,26,0.95)}
-.border-copper\/95{border-color:rgba(232,98,26,0.95)}
-.bg-cream{background-color:#F5F2EE}
-.text-cream{color:#F5F2EE}
-.border-cream{border-color:#F5F2EE}
-.fill-cream{fill:#F5F2EE}
-.ring-cream{--tw-ring-color:#F5F2EE}
-.from-cream{--tw-gradient-from:#F5F2EE;--tw-gradient-stops:var(--tw-gradient-from),var(--tw-gradient-to,rgba(245,242,238,0))}
-.to-cream{--tw-gradient-to:#F5F2EE}
-.via-cream{--tw-gradient-stops:var(--tw-gradient-from),#F5F2EE,var(--tw-gradient-to,rgba(245,242,238,0))}
-.bg-cream\/5{background-color:rgba(245,242,238,0.05)}
-.text-cream\/5{color:rgba(245,242,238,0.05)}
-.border-cream\/5{border-color:rgba(245,242,238,0.05)}
-.bg-cream\/10{background-color:rgba(245,242,238,0.1)}
-.text-cream\/10{color:rgba(245,242,238,0.1)}
-.border-cream\/10{border-color:rgba(245,242,238,0.1)}
-.bg-cream\/15{background-color:rgba(245,242,238,0.15)}
-.text-cream\/15{color:rgba(245,242,238,0.15)}
-.border-cream\/15{border-color:rgba(245,242,238,0.15)}
-.bg-cream\/20{background-color:rgba(245,242,238,0.2)}
-.text-cream\/20{color:rgba(245,242,238,0.2)}
-.border-cream\/20{border-color:rgba(245,242,238,0.2)}
-.bg-cream\/25{background-color:rgba(245,242,238,0.25)}
-.text-cream\/25{color:rgba(245,242,238,0.25)}
-.border-cream\/25{border-color:rgba(245,242,238,0.25)}
-.bg-cream\/30{background-color:rgba(245,242,238,0.3)}
-.text-cream\/30{color:rgba(245,242,238,0.3)}
-.border-cream\/30{border-color:rgba(245,242,238,0.3)}
-.bg-cream\/40{background-color:rgba(245,242,238,0.4)}
-.text-cream\/40{color:rgba(245,242,238,0.4)}
-.border-cream\/40{border-color:rgba(245,242,238,0.4)}
-.bg-cream\/50{background-color:rgba(245,242,238,0.5)}
-.text-cream\/50{color:rgba(245,242,238,0.5)}
-.border-cream\/50{border-color:rgba(245,242,238,0.5)}
-.bg-cream\/60{background-color:rgba(245,242,238,0.6)}
-.text-cream\/60{color:rgba(245,242,238,0.6)}
-.border-cream\/60{border-color:rgba(245,242,238,0.6)}
-.bg-cream\/70{background-color:rgba(245,242,238,0.7)}
-.text-cream\/70{color:rgba(245,242,238,0.7)}
-.border-cream\/70{border-color:rgba(245,242,238,0.7)}
-.bg-cream\/75{background-color:rgba(245,242,238,0.75)}
-.text-cream\/75{color:rgba(245,242,238,0.75)}
-.border-cream\/75{border-color:rgba(245,242,238,0.75)}
-.bg-cream\/80{background-color:rgba(245,242,238,0.8)}
-.text-cream\/80{color:rgba(245,242,238,0.8)}
-.border-cream\/80{border-color:rgba(245,242,238,0.8)}
-.bg-cream\/90{background-color:rgba(245,242,238,0.9)}
-.text-cream\/90{color:rgba(245,242,238,0.9)}
-.border-cream\/90{border-color:rgba(245,242,238,0.9)}
-.bg-cream\/95{background-color:rgba(245,242,238,0.95)}
-.text-cream\/95{color:rgba(245,242,238,0.95)}
-.border-cream\/95{border-color:rgba(245,242,238,0.95)}
-.bg-ink{background-color:#1C1C1C}
-.text-ink{color:#1C1C1C}
-.border-ink{border-color:#1C1C1C}
-.fill-ink{fill:#1C1C1C}
-.ring-ink{--tw-ring-color:#1C1C1C}
-.from-ink{--tw-gradient-from:#1C1C1C;--tw-gradient-stops:var(--tw-gradient-from),var(--tw-gradient-to,rgba(28,28,28,0))}
-.to-ink{--tw-gradient-to:#1C1C1C}
-.via-ink{--tw-gradient-stops:var(--tw-gradient-from),#1C1C1C,var(--tw-gradient-to,rgba(28,28,28,0))}
-.bg-ink\/5{background-color:rgba(28,28,28,0.05)}
-.text-ink\/5{color:rgba(28,28,28,0.05)}
-.border-ink\/5{border-color:rgba(28,28,28,0.05)}
-.bg-ink\/10{background-color:rgba(28,28,28,0.1)}
-.text-ink\/10{color:rgba(28,28,28,0.1)}
-.border-ink\/10{border-color:rgba(28,28,28,0.1)}
-.bg-ink\/15{background-color:rgba(28,28,28,0.15)}
-.text-ink\/15{color:rgba(28,28,28,0.15)}
-.border-ink\/15{border-color:rgba(28,28,28,0.15)}
-.bg-ink\/20{background-color:rgba(28,28,28,0.2)}
-.text-ink\/20{color:rgba(28,28,28,0.2)}
-.border-ink\/20{border-color:rgba(28,28,28,0.2)}
-.bg-ink\/25{background-color:rgba(28,28,28,0.25)}
-.text-ink\/25{color:rgba(28,28,28,0.25)}
-.border-ink\/25{border-color:rgba(28,28,28,0.25)}
-.bg-ink\/30{background-color:rgba(28,28,28,0.3)}
-.text-ink\/30{color:rgba(28,28,28,0.3)}
-.border-ink\/30{border-color:rgba(28,28,28,0.3)}
-.bg-ink\/40{background-color:rgba(28,28,28,0.4)}
-.text-ink\/40{color:rgba(28,28,28,0.4)}
-.border-ink\/40{border-color:rgba(28,28,28,0.4)}
-.bg-ink\/50{background-color:rgba(28,28,28,0.5)}
-.text-ink\/50{color:rgba(28,28,28,0.5)}
-.border-ink\/50{border-color:rgba(28,28,28,0.5)}
-.bg-ink\/60{background-color:rgba(28,28,28,0.6)}
-.text-ink\/60{color:rgba(28,28,28,0.6)}
-.border-ink\/60{border-color:rgba(28,28,28,0.6)}
-.bg-ink\/70{background-color:rgba(28,28,28,0.7)}
-.text-ink\/70{color:rgba(28,28,28,0.7)}
-.border-ink\/70{border-color:rgba(28,28,28,0.7)}
-.bg-ink\/75{background-color:rgba(28,28,28,0.75)}
-.text-ink\/75{color:rgba(28,28,28,0.75)}
-.border-ink\/75{border-color:rgba(28,28,28,0.75)}
-.bg-ink\/80{background-color:rgba(28,28,28,0.8)}
-.text-ink\/80{color:rgba(28,28,28,0.8)}
-.border-ink\/80{border-color:rgba(28,28,28,0.8)}
-.bg-ink\/90{background-color:rgba(28,28,28,0.9)}
-.text-ink\/90{color:rgba(28,28,28,0.9)}
-.border-ink\/90{border-color:rgba(28,28,28,0.9)}
-.bg-ink\/95{background-color:rgba(28,28,28,0.95)}
-.text-ink\/95{color:rgba(28,28,28,0.95)}
-.border-ink\/95{border-color:rgba(28,28,28,0.95)}
-.bg-cream-dark{background-color:#EDE9E3}
-.text-cream-dark{color:#EDE9E3}
-.border-cream-dark{border-color:#EDE9E3}
-.fill-cream-dark{fill:#EDE9E3}
-.ring-cream-dark{--tw-ring-color:#EDE9E3}
-.from-cream-dark{--tw-gradient-from:#EDE9E3;--tw-gradient-stops:var(--tw-gradient-from),var(--tw-gradient-to,rgba(237,233,227,0))}
-.to-cream-dark{--tw-gradient-to:#EDE9E3}
-.via-cream-dark{--tw-gradient-stops:var(--tw-gradient-from),#EDE9E3,var(--tw-gradient-to,rgba(237,233,227,0))}
-.bg-cream-dark\/5{background-color:rgba(237,233,227,0.05)}
-.text-cream-dark\/5{color:rgba(237,233,227,0.05)}
-.border-cream-dark\/5{border-color:rgba(237,233,227,0.05)}
-.bg-cream-dark\/10{background-color:rgba(237,233,227,0.1)}
-.text-cream-dark\/10{color:rgba(237,233,227,0.1)}
-.border-cream-dark\/10{border-color:rgba(237,233,227,0.1)}
-.bg-cream-dark\/15{background-color:rgba(237,233,227,0.15)}
-.text-cream-dark\/15{color:rgba(237,233,227,0.15)}
-.border-cream-dark\/15{border-color:rgba(237,233,227,0.15)}
-.bg-cream-dark\/20{background-color:rgba(237,233,227,0.2)}
-.text-cream-dark\/20{color:rgba(237,233,227,0.2)}
-.border-cream-dark\/20{border-color:rgba(237,233,227,0.2)}
-.bg-cream-dark\/25{background-color:rgba(237,233,227,0.25)}
-.text-cream-dark\/25{color:rgba(237,233,227,0.25)}
-.border-cream-dark\/25{border-color:rgba(237,233,227,0.25)}
-.bg-cream-dark\/30{background-color:rgba(237,233,227,0.3)}
-.text-cream-dark\/30{color:rgba(237,233,227,0.3)}
-.border-cream-dark\/30{border-color:rgba(237,233,227,0.3)}
-.bg-cream-dark\/40{background-color:rgba(237,233,227,0.4)}
-.text-cream-dark\/40{color:rgba(237,233,227,0.4)}
-.border-cream-dark\/40{border-color:rgba(237,233,227,0.4)}
-.bg-cream-dark\/50{background-color:rgba(237,233,227,0.5)}
-.text-cream-dark\/50{color:rgba(237,233,227,0.5)}
-.border-cream-dark\/50{border-color:rgba(237,233,227,0.5)}
-.bg-cream-dark\/60{background-color:rgba(237,233,227,0.6)}
-.text-cream-dark\/60{color:rgba(237,233,227,0.6)}
-.border-cream-dark\/60{border-color:rgba(237,233,227,0.6)}
-.bg-cream-dark\/70{background-color:rgba(237,233,227,0.7)}
-.text-cream-dark\/70{color:rgba(237,233,227,0.7)}
-.border-cream-dark\/70{border-color:rgba(237,233,227,0.7)}
-.bg-cream-dark\/75{background-color:rgba(237,233,227,0.75)}
-.text-cream-dark\/75{color:rgba(237,233,227,0.75)}
-.border-cream-dark\/75{border-color:rgba(237,233,227,0.75)}
-.bg-cream-dark\/80{background-color:rgba(237,233,227,0.8)}
-.text-cream-dark\/80{color:rgba(237,233,227,0.8)}
-.border-cream-dark\/80{border-color:rgba(237,233,227,0.8)}
-.bg-cream-dark\/90{background-color:rgba(237,233,227,0.9)}
-.text-cream-dark\/90{color:rgba(237,233,227,0.9)}
-.border-cream-dark\/90{border-color:rgba(237,233,227,0.9)}
-.bg-cream-dark\/95{background-color:rgba(237,233,227,0.95)}
-.text-cream-dark\/95{color:rgba(237,233,227,0.95)}
-.border-cream-dark\/95{border-color:rgba(237,233,227,0.95)}
-.bg-navy-light{background-color:#2a5080}
-.text-navy-light{color:#2a5080}
-.border-navy-light{border-color:#2a5080}
-.fill-navy-light{fill:#2a5080}
-.ring-navy-light{--tw-ring-color:#2a5080}
-.from-navy-light{--tw-gradient-from:#2a5080;--tw-gradient-stops:var(--tw-gradient-from),var(--tw-gradient-to,rgba(42,80,128,0))}
-.to-navy-light{--tw-gradient-to:#2a5080}
-.via-navy-light{--tw-gradient-stops:var(--tw-gradient-from),#2a5080,var(--tw-gradient-to,rgba(42,80,128,0))}
-.bg-navy-light\/5{background-color:rgba(42,80,128,0.05)}
-.text-navy-light\/5{color:rgba(42,80,128,0.05)}
-.border-navy-light\/5{border-color:rgba(42,80,128,0.05)}
-.bg-navy-light\/10{background-color:rgba(42,80,128,0.1)}
-.text-navy-light\/10{color:rgba(42,80,128,0.1)}
-.border-navy-light\/10{border-color:rgba(42,80,128,0.1)}
-.bg-navy-light\/15{background-color:rgba(42,80,128,0.15)}
-.text-navy-light\/15{color:rgba(42,80,128,0.15)}
-.border-navy-light\/15{border-color:rgba(42,80,128,0.15)}
-.bg-navy-light\/20{background-color:rgba(42,80,128,0.2)}
-.text-navy-light\/20{color:rgba(42,80,128,0.2)}
-.border-navy-light\/20{border-color:rgba(42,80,128,0.2)}
-.bg-navy-light\/25{background-color:rgba(42,80,128,0.25)}
-.text-navy-light\/25{color:rgba(42,80,128,0.25)}
-.border-navy-light\/25{border-color:rgba(42,80,128,0.25)}
-.bg-navy-light\/30{background-color:rgba(42,80,128,0.3)}
-.text-navy-light\/30{color:rgba(42,80,128,0.3)}
-.border-navy-light\/30{border-color:rgba(42,80,128,0.3)}
-.bg-navy-light\/40{background-color:rgba(42,80,128,0.4)}
-.text-navy-light\/40{color:rgba(42,80,128,0.4)}
-.border-navy-light\/40{border-color:rgba(42,80,128,0.4)}
-.bg-navy-light\/50{background-color:rgba(42,80,128,0.5)}
-.text-navy-light\/50{color:rgba(42,80,128,0.5)}
-.border-navy-light\/50{border-color:rgba(42,80,128,0.5)}
-.bg-navy-light\/60{background-color:rgba(42,80,128,0.6)}
-.text-navy-light\/60{color:rgba(42,80,128,0.6)}
-.border-navy-light\/60{border-color:rgba(42,80,128,0.6)}
-.bg-navy-light\/70{background-color:rgba(42,80,128,0.7)}
-.text-navy-light\/70{color:rgba(42,80,128,0.7)}
-.border-navy-light\/70{border-color:rgba(42,80,128,0.7)}
-.bg-navy-light\/75{background-color:rgba(42,80,128,0.75)}
-.text-navy-light\/75{color:rgba(42,80,128,0.75)}
-.border-navy-light\/75{border-color:rgba(42,80,128,0.75)}
-.bg-navy-light\/80{background-color:rgba(42,80,128,0.8)}
-.text-navy-light\/80{color:rgba(42,80,128,0.8)}
-.border-navy-light\/80{border-color:rgba(42,80,128,0.8)}
-.bg-navy-light\/90{background-color:rgba(42,80,128,0.9)}
-.text-navy-light\/90{color:rgba(42,80,128,0.9)}
-.border-navy-light\/90{border-color:rgba(42,80,128,0.9)}
-.bg-navy-light\/95{background-color:rgba(42,80,128,0.95)}
-.text-navy-light\/95{color:rgba(42,80,128,0.95)}
-.border-navy-light\/95{border-color:rgba(42,80,128,0.95)}
-.bg-sand{background-color:#EAE4DB}
-.text-sand{color:#EAE4DB}
-.border-sand{border-color:#EAE4DB}
-.fill-sand{fill:#EAE4DB}
-.ring-sand{--tw-ring-color:#EAE4DB}
-.from-sand{--tw-gradient-from:#EAE4DB;--tw-gradient-stops:var(--tw-gradient-from),var(--tw-gradient-to,rgba(234,228,219,0))}
-.to-sand{--tw-gradient-to:#EAE4DB}
-.via-sand{--tw-gradient-stops:var(--tw-gradient-from),#EAE4DB,var(--tw-gradient-to,rgba(234,228,219,0))}
-.bg-sand\/5{background-color:rgba(234,228,219,0.05)}
-.text-sand\/5{color:rgba(234,228,219,0.05)}
-.border-sand\/5{border-color:rgba(234,228,219,0.05)}
-.bg-sand\/10{background-color:rgba(234,228,219,0.1)}
-.text-sand\/10{color:rgba(234,228,219,0.1)}
-.border-sand\/10{border-color:rgba(234,228,219,0.1)}
-.bg-sand\/15{background-color:rgba(234,228,219,0.15)}
-.text-sand\/15{color:rgba(234,228,219,0.15)}
-.border-sand\/15{border-color:rgba(234,228,219,0.15)}
-.bg-sand\/20{background-color:rgba(234,228,219,0.2)}
-.text-sand\/20{color:rgba(234,228,219,0.2)}
-.border-sand\/20{border-color:rgba(234,228,219,0.2)}
-.bg-sand\/25{background-color:rgba(234,228,219,0.25)}
-.text-sand\/25{color:rgba(234,228,219,0.25)}
-.border-sand\/25{border-color:rgba(234,228,219,0.25)}
-.bg-sand\/30{background-color:rgba(234,228,219,0.3)}
-.text-sand\/30{color:rgba(234,228,219,0.3)}
-.border-sand\/30{border-color:rgba(234,228,219,0.3)}
-.bg-sand\/40{background-color:rgba(234,228,219,0.4)}
-.text-sand\/40{color:rgba(234,228,219,0.4)}
-.border-sand\/40{border-color:rgba(234,228,219,0.4)}
-.bg-sand\/50{background-color:rgba(234,228,219,0.5)}
-.text-sand\/50{color:rgba(234,228,219,0.5)}
-.border-sand\/50{border-color:rgba(234,228,219,0.5)}
-.bg-sand\/60{background-color:rgba(234,228,219,0.6)}
-.text-sand\/60{color:rgba(234,228,219,0.6)}
-.border-sand\/60{border-color:rgba(234,228,219,0.6)}
-.bg-sand\/70{background-color:rgba(234,228,219,0.7)}
-.text-sand\/70{color:rgba(234,228,219,0.7)}
-.border-sand\/70{border-color:rgba(234,228,219,0.7)}
-.bg-sand\/75{background-color:rgba(234,228,219,0.75)}
-.text-sand\/75{color:rgba(234,228,219,0.75)}
-.border-sand\/75{border-color:rgba(234,228,219,0.75)}
-.bg-sand\/80{background-color:rgba(234,228,219,0.8)}
-.text-sand\/80{color:rgba(234,228,219,0.8)}
-.border-sand\/80{border-color:rgba(234,228,219,0.8)}
-.bg-sand\/90{background-color:rgba(234,228,219,0.9)}
-.text-sand\/90{color:rgba(234,228,219,0.9)}
-.border-sand\/90{border-color:rgba(234,228,219,0.9)}
-.bg-sand\/95{background-color:rgba(234,228,219,0.95)}
-.text-sand\/95{color:rgba(234,228,219,0.95)}
-.border-sand\/95{border-color:rgba(234,228,219,0.95)}
-.bg-mist{background-color:#D6CFC4}
-.text-mist{color:#D6CFC4}
-.border-mist{border-color:#D6CFC4}
-.fill-mist{fill:#D6CFC4}
-.ring-mist{--tw-ring-color:#D6CFC4}
-.from-mist{--tw-gradient-from:#D6CFC4;--tw-gradient-stops:var(--tw-gradient-from),var(--tw-gradient-to,rgba(214,207,196,0))}
-.to-mist{--tw-gradient-to:#D6CFC4}
-.via-mist{--tw-gradient-stops:var(--tw-gradient-from),#D6CFC4,var(--tw-gradient-to,rgba(214,207,196,0))}
-.bg-mist\/5{background-color:rgba(214,207,196,0.05)}
-.text-mist\/5{color:rgba(214,207,196,0.05)}
-.border-mist\/5{border-color:rgba(214,207,196,0.05)}
-.bg-mist\/10{background-color:rgba(214,207,196,0.1)}
-.text-mist\/10{color:rgba(214,207,196,0.1)}
-.border-mist\/10{border-color:rgba(214,207,196,0.1)}
-.bg-mist\/15{background-color:rgba(214,207,196,0.15)}
-.text-mist\/15{color:rgba(214,207,196,0.15)}
-.border-mist\/15{border-color:rgba(214,207,196,0.15)}
-.bg-mist\/20{background-color:rgba(214,207,196,0.2)}
-.text-mist\/20{color:rgba(214,207,196,0.2)}
-.border-mist\/20{border-color:rgba(214,207,196,0.2)}
-.bg-mist\/25{background-color:rgba(214,207,196,0.25)}
-.text-mist\/25{color:rgba(214,207,196,0.25)}
-.border-mist\/25{border-color:rgba(214,207,196,0.25)}
-.bg-mist\/30{background-color:rgba(214,207,196,0.3)}
-.text-mist\/30{color:rgba(214,207,196,0.3)}
-.border-mist\/30{border-color:rgba(214,207,196,0.3)}
-.bg-mist\/40{background-color:rgba(214,207,196,0.4)}
-.text-mist\/40{color:rgba(214,207,196,0.4)}
-.border-mist\/40{border-color:rgba(214,207,196,0.4)}
-.bg-mist\/50{background-color:rgba(214,207,196,0.5)}
-.text-mist\/50{color:rgba(214,207,196,0.5)}
-.border-mist\/50{border-color:rgba(214,207,196,0.5)}
-.bg-mist\/60{background-color:rgba(214,207,196,0.6)}
-.text-mist\/60{color:rgba(214,207,196,0.6)}
-.border-mist\/60{border-color:rgba(214,207,196,0.6)}
-.bg-mist\/70{background-color:rgba(214,207,196,0.7)}
-.text-mist\/70{color:rgba(214,207,196,0.7)}
-.border-mist\/70{border-color:rgba(214,207,196,0.7)}
-.bg-mist\/75{background-color:rgba(214,207,196,0.75)}
-.text-mist\/75{color:rgba(214,207,196,0.75)}
-.border-mist\/75{border-color:rgba(214,207,196,0.75)}
-.bg-mist\/80{background-color:rgba(214,207,196,0.8)}
-.text-mist\/80{color:rgba(214,207,196,0.8)}
-.border-mist\/80{border-color:rgba(214,207,196,0.8)}
-.bg-mist\/90{background-color:rgba(214,207,196,0.9)}
-.text-mist\/90{color:rgba(214,207,196,0.9)}
-.border-mist\/90{border-color:rgba(214,207,196,0.9)}
-.bg-mist\/95{background-color:rgba(214,207,196,0.95)}
-.text-mist\/95{color:rgba(214,207,196,0.95)}
-.border-mist\/95{border-color:rgba(214,207,196,0.95)}
-</style>
-<style>
-    #page-home { background-color: #F5F2EE; color: #1C1C1C; font-family: 'Source Sans 3', sans-serif; }
-    h1, h2, h3, .headline { font-family: 'Barlow Condensed', sans-serif; }
-    .hero-overlay { background: linear-gradient(to right, rgba(26,58,92,0.82) 0%, rgba(26,58,92,0.45) 60%, rgba(26,58,92,0.10) 100%); }
-    .texture-bg { background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%231A3A5C' fill-opacity='0.04'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E"); }
-    .service-card:hover { transform: translateY(-3px); transition: transform 0.25s ease; }
-    .example-badge {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      background: rgba(0,0,0,0.45);
-      color: #fff;
-      font-size: 1.1rem;
-      font-family: 'Source Sans 3', sans-serif;
-      font-weight: 600;
-      padding: 8px 22px;
-      border-radius: 6px;
-      letter-spacing: 0.08em;
-      pointer-events: none;
-      z-index: 10;
-      white-space: nowrap;
-  }</style>
-<style>
-    #page-about { font-family: 'Source Sans 3', sans-serif; background-color: #F5F2EE; color: #1C1C1C; }
+<!DOCTYPE html><html lang="de"><head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Über uns – Schäffner Heizung & Sanitär Meisterbetrieb Rettigheim seit 1995</title>
+  <meta name="description" content="Schäffner Heizung & Sanitär – Meisterbetrieb seit 1995. Persönlich, zuverlässig, fair. Lernen Sie das Team hinter dem Betrieb kennen.">
+  <link rel="canonical" href="about.html">
+  <meta property="og:title" content="Über uns – Schäffner Heizung & Sanitär Meisterbetrieb Rettigheim seit 1995">
+  <meta property="og:description" content="Seit 1995 führt das Schäffner Team seinen Meisterbetrieb in Rettigheim. 365 Tage Notfallservice, faire Preise, persönliche Verantwortung.">
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800;900&family=Source+Sans+3:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            navy: '#1A3A5C',
+            copper: '#E8621A',
+            cream: '#F5F2EE',
+            ink: '#1C1C1C',
+            'cream-dark': '#EDE9E3',
+          },
+          fontFamily: {
+            headline: ['Barlow Condensed', 'sans-serif'],
+            body: ['Source Sans 3', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body { font-family: 'Source Sans 3', sans-serif; background-color: #F5F2EE; color: #1C1C1C; }
     h1, h2, h3, .font-headline { font-family: 'Barlow Condensed', sans-serif; }
     .texture-bg { background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%231A3A5C' fill-opacity='0.04'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E"); }
     .timeline-line::before { content: ''; position: absolute; left: 18px; top: 0; bottom: 0; width: 2px; background: linear-gradient(to bottom, #E8621A, #1A3A5C); }
     .photo-beispiel-wrap { position: relative; }
     .photo-beispiel-label {
-      position: absolute;
-      top: 0; left: 0; right: 0; bottom: 0;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      pointer-events: none;
-      z-index: 10;
+      position: absolute; top: 0; left: 0; right: 0; bottom: 0;
+      display: flex; align-items: center; justify-content: center;
+      pointer-events: none; z-index: 10;
+    }
     .photo-beispiel-label span {
-      font-family: 'Barlow Condensed', sans-serif;
-      font-weight: 900;
-      font-size: 2.5rem;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
+      font-family: 'Barlow Condensed', sans-serif; font-weight: 900; font-size: 2.5rem;
+      letter-spacing: 0.12em; text-transform: uppercase;
       color: rgba(255,255,255,0.92);
       text-shadow: 0 2px 16px rgba(26,58,92,0.55), 0 1px 2px rgba(0,0,0,0.4);
-  }}</style>
-<style>
-    #page-services { font-family: 'Source Sans 3', sans-serif; background-color: #F5F2EE; color: #1C1C1C; }
-    h1, h2, h3, h4 { font-family: 'Barlow Condensed', sans-serif; }
-    .texture-bg { background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%231A3A5C' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E"); }
-    .service-card:hover { transform: translateY(-3px); transition: transform 0.25s ease; }
-    .nav-link { font-family: 'Barlow Condensed', sans-serif; font-size: 1.05rem; font-weight: 600; letter-spacing: 0.04em; }
+    }
   </style>
-<style>
-    #page-contact { font-family: 'Source Sans 3', sans-serif; background-color: #F5F2EE; color: #1C1C1C; }
-    h1, h2, h3, .font-headline { font-family: 'Barlow Condensed', sans-serif; }
-    textarea, input, select { font-family: 'Source Sans 3', sans-serif; }
-    .texture-bg { background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%231A3A5C' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E"); }
-  </style>
-<style>* { box-sizing: border-box; } html, body { margin: 0; padding: 0; }</style>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Schäffner Heizung und Sanitär Meisterbetrieb",
+    "description": "Seit 1995 Meisterbetrieb für Heizung und Sanitär in Rettigheim. 365 Tage Notfallservice.",
+    "foundingDate": "1995",
+    "url": "about.html",
+    "address": { "@type": "PostalAddress", "streetAddress": "Schönblick 5", "postalCode": "69242", "addressLocality": "Mühlhausen", "addressCountry": "DE" }
+  }
+  </script>
 </head>
-<body>
-
+<body style="padding-top:64px;">
 
 <!-- NAV -->
 <nav style="position:fixed;top:0;left:0;right:0;z-index:9999;background:rgba(26,58,92,0.97);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-bottom:1px solid rgba(232,98,26,0.18);padding:0 32px;height:64px;display:flex;align-items:center;justify-content:space-between;">
   <div style="display:flex;flex-direction:column;align-items:flex-start;gap:0;">
-    <svg xmlns="http://www.w3.org/2000/svg" width="200" height="48" viewBox="0 0 200 48" aria-label="Alexander Schäffner Heizung und Sanitär">
-      <rect x="42" y="10" width="2" height="28" fill="#E8621A" opacity="0.5"/>
-      <text x="50" y="24" font-family="Barlow Condensed, sans-serif" font-weight="900" font-size="17" fill="white" letter-spacing="1.5">SCHÄFFNER</text>
-      <text x="50" y="38" font-family="Barlow Condensed, sans-serif" font-weight="600" font-size="10.5" fill="#E8621A" letter-spacing="2.5">HEIZUNG · SANITÄR</text>
-      <rect x="50" y="41" width="72" height="5" fill="none"/>
+    <svg xmlns="http://www.w3.org/2000/svg" width="200" height="48" viewBox="0 0 200 48" role="img" aria-label="Schäffner Heizung und Sanitär Meisterbetrieb">
+      <rect x="0" y="10" width="4" height="28" fill="#E8621A" rx="2"/>
+      <line x1="14" y1="12" x2="14" y2="36" stroke="rgba(255,255,255,0.25)" stroke-width="1.5"/>
+      <text x="22" y="23" font-family="Barlow Condensed, sans-serif" font-weight="800" font-size="13" fill="#FFFFFF" letter-spacing="0.5">SCHÄFFNER</text>
+      <text x="22" y="37" font-family="Source Sans 3, sans-serif" font-weight="400" font-size="9.5" fill="rgba(255,255,255,0.6)" letter-spacing="1.2">HEIZUNG · SANITÄR</text>
     </svg>
-    <span style="font-family:'Source Sans 3',sans-serif;font-size:0.6rem;color:rgba(255,255,255,0.35);letter-spacing:0.5px;margin-top:-4px;padding-left:50px;">(Entwurf)</span>
+    <span style="font-size:9px;color:rgba(255,255,255,0.28);font-family:'Source Sans 3',sans-serif;letter-spacing:0.3px;margin-top:-2px;padding-left:14px;">(Entwurf)</span>
   </div>
   <div style="display:flex;gap:32px;align-items:center;">
-    <a href="index.html" style="color:rgba(255,255,255,0.85);text-decoration:none;font-size:0.875rem;font-weight:500;letter-spacing:0.3px;transition:color 0.2s;">Home</a>
+    <a href="index.html" style="color:rgba(255,255,255,0.85);text-decoration:none;font-size:0.875rem;font-weight:500;letter-spacing:0.3px;">Home</a>
     <a href="about.html" style="color:#E8621A;text-decoration:none;font-size:0.875rem;font-weight:600;letter-spacing:0.3px;">Über uns</a>
-    <a href="services.html" style="color:rgba(255,255,255,0.85);text-decoration:none;font-size:0.875rem;font-weight:500;letter-spacing:0.3px;transition:color 0.2s;">Leistungen</a>
-    <a href="contact.html" style="color:white;text-decoration:none;font-size:0.875rem;font-weight:700;background:#E8621A;padding:8px 20px;border-radius:2px;transition:opacity 0.2s;">Kontakt</a>
+    <a href="services.html" style="color:rgba(255,255,255,0.85);text-decoration:none;font-size:0.875rem;font-weight:500;letter-spacing:0.3px;">Leistungen</a>
+    <a href="contact.html" style="color:white;text-decoration:none;font-size:0.875rem;font-weight:700;background:#E8621A;padding:8px 20px;border-radius:2px;">Kontakt</a>
   </div>
 </nav>
 
-<!-- ═══════════════════════════════════════════════
-     HERO
-═══════════════════════════════════════════════ -->
-<section class="relative overflow-hidden bg-navy texture-bg">
+<!-- HERO -->
+<section class="relative overflow-hidden texture-bg" style="background-color:#1A3A5C;">
   <div class="absolute inset-0 opacity-20">
     <div class="absolute top-0 right-0 w-1/2 h-full" style="background: linear-gradient(135deg, transparent 40%, #E8621A22 100%);"></div>
   </div>
-
   <div class="relative max-w-7xl mx-auto px-6 lg:px-12 py-20 lg:py-32">
     <div class="grid lg:grid-cols-12 gap-12 items-end">
-
       <div class="lg:col-span-7">
         <div class="flex items-center gap-3 mb-8">
-          <div class="w-8 h-px bg-copper"></div>
-          <span class="font-body text-copper text-sm font-semibold tracking-widest uppercase">Über uns</span>
+          <div class="w-8 h-px" style="background-color:#E8621A;"></div>
+          <span class="font-body text-sm font-semibold tracking-widest uppercase" style="color:#E8621A;">Über uns</span>
         </div>
-        <h1 class="font-headline font-black text-white leading-none mb-6" style="font-size: clamp(2.8rem, 6vw, 5rem);">
+        <h1 class="font-headline font-black leading-none mb-6" style="color:#ffffff; font-size: clamp(2.8rem, 6vw, 5rem);">
           HANDWERK MIT<br>
-          <span class="text-copper">HALTUNG.</span><br>
+          <span style="color:#E8621A;">HALTUNG.</span><br>
           SEIT 1995.
         </h1>
-        <p class="font-body text-blue-100 text-lg leading-relaxed max-w-lg" style="font-weight:300;">
-          Es gibt Betriebe, die groß reden. Und es gibt Alexander Schäffner – der einfach erscheint, die Arbeit macht und dafür sorgt, dass es wieder warm wird. Das war 1995 so. Das ist heute so.
+        <p class="font-body text-lg leading-relaxed max-w-lg" style="color:#dbeafe; font-weight:300;">
+          Es gibt Betriebe, die groß reden. Und es gibt das Schäffner Team – das einfach erscheint, die Arbeit macht und dafür sorgt, dass es wieder warm wird. Das war 1995 so. Das ist heute so.
         </p>
       </div>
+      <div class="lg:col-span-5">
+        <div class="relative">
+          <div class="p-8 lg:p-10" style="background-color:#E8621A;">
+            <p class="font-headline font-black text-5xl leading-none mb-2" style="color:#ffffff;">29</p>
+            <p class="font-headline text-xl font-semibold tracking-wide uppercase mb-6" style="color:#ffffff;">Jahre Erfahrung</p>
+            <div class="w-12 h-px mb-6" style="background-color:rgba(255,255,255,0.4);"></div>
+            <p class="font-body text-base leading-relaxed" style="color:#ffffff; font-weight:300;">
+              Kein Franchisebetrieb. Kein Callcenter. Ein eingespieltes Team, das persönlich für seine Arbeit einsteht.
+            </p>
+          </div>
+          <div class="absolute -bottom-4 -right-4 w-24 h-24" style="background-color:#EDE9E3; opacity:0.3;"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STORY -->
+<section class="texture-bg py-20 lg:py-28" style="background-color:#EDE9E3;">
+  <div class="max-w-7xl mx-auto px-6 lg:px-12">
+    <div class="grid lg:grid-cols-12 gap-12 lg:gap-20 items-start">
 
       <div class="lg:col-span-5">
         <div class="relative">
-          <div class="bg-copper p-8 lg:p-10">
-            <p class="font-headline font-black text-white text-5xl leading-none mb-2">29</p>
-            <p class="font-headline text-white text-xl font-semibold tracking-wide uppercase mb-6">Jahre Erfahrung</p>
-            <div class="w-12 h-px bg-white opacity-40 mb-6"></div>
-            <p class="font-body text-white text-base leading-relaxed" style="font-weight:300;">
-              Kein Franchisebetrieb. Kein Callcenter. Ein Meister, der persönlich für seine Arbeit einsteht.
+          <div class="aspect-[4/5] relative overflow-hidden photo-beispiel-wrap" style="background-color:#DDD8D0;">
+            <img src="https://images.unsplash.com/photo-1621905251918-48416bd8575a?w=800&q=80" alt="Beispielfoto: Sanitär- und Heizungshandwerker bei der Arbeit" class="w-full h-full object-cover">
+            <div class="photo-beispiel-label"><span>Beispiel</span></div>
+            <div class="absolute bottom-0 left-0 right-0 p-4" style="background-color:#1A3A5C; z-index:20;">
+              <p class="font-headline font-bold text-lg uppercase tracking-wide" style="color:#ffffff;">Schäffner Heizung</p>
+              <p class="font-body text-sm" style="color:#E8621A;">Meisterbetrieb SHK seit 1995</p>
+            </div>
+          </div>
+          <div class="absolute -top-4 -left-4 w-16 h-16 border-2 opacity-50" style="border-color:#E8621A;"></div>
+          <div class="absolute -right-4 -bottom-4 py-3 px-5 shadow-lg" style="background-color:#1A3A5C;">
+            <p class="font-headline font-black text-3xl leading-none" style="color:#E8621A;">1995</p>
+            <p class="font-body text-xs tracking-widest uppercase" style="color:#bfdbfe;">Gegründet</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="lg:col-span-7">
+        <div class="flex items-center gap-3 mb-6">
+          <div class="w-8 h-px" style="background-color:#E8621A;"></div>
+          <span class="font-body text-sm font-semibold tracking-widest uppercase" style="color:#E8621A;">Die Geschichte</span>
+        </div>
+        <h2 class="font-headline font-black leading-tight mb-8" style="color:#1A3A5C; font-size: clamp(2rem, 4vw, 3rem);">
+          GEGRÜNDET 1995 IN RETTIGHEIM.<br>GEWACHSEN DURCH WEITEREMPFEHLUNG.
+        </h2>
+        <div class="space-y-5 font-body text-base leading-relaxed" style="color:#1C1C1C; font-weight:400;">
+          <p>Alexander Schäffner gründete den Betrieb 1995 mit einer schlichten Vorstellung davon, wie Handwerk funktionieren sollte: ankommen, zuhören, sauber arbeiten, fertig werden. Was klein begann, ist heute ein eingespieltes Führungsteam mit klarer Haltung – in Rettigheim und Umgebung bekannt nicht durch Werbung, sondern weil Kunden andere Kunden schicken.</p>
+          <p>Der Meistertitel hängt nicht gerahmt im Büro. Er zeigt sich darin, wie gearbeitet wird: jede Lötstelle, jede Rohrführung, jeder Anschluss. Wer einen Meisterbetrieb beauftragt, bekommt ein Team, das persönlich für das einsteht, was es gebaut hat.</p>
+          <p>Die Technik hat sich in 29 Jahren grundlegend verändert. Früher war es die einfache Gasheizung. Heute kommen Wärmepumpen, Pelletkessel und Solaranlagen dazu. Was gleich geblieben ist: Wenn das Wasser kalt bleibt oder die Heizung ausfällt, ist das Schäffner Team da. An 365 Tagen im Jahr, auch samstags, auch im Januar.</p>
+        </div>
+        <div class="mt-10 pt-8" style="border-top:1px solid #DDD8D0;">
+          <blockquote class="relative">
+            <div class="absolute -top-3 -left-2 font-headline font-black" style="font-size:4rem; line-height:1; color:#E8621A; opacity:0.4;">"</div>
+            <p class="font-headline font-semibold text-xl pl-8 leading-snug italic" style="color:#1A3A5C;">
+              Unsere Kunden sollen wissen: Wenn wir sagen, wir kommen – dann kommen wir. Und wenn wir eine Anlage einbauen, steht sie.
             </p>
-          </div>
-          <div class="absolute -bottom-4 -right-4 w-24 h-24 bg-cream-dark opacity-30"></div>
+            <footer class="mt-4 pl-8 font-body text-sm" style="color:#1C1C1C; opacity:0.6;">— Alexander Schäffner, Gründer & Inhaber
+  <div style="border-top:1px solid rgba(255,255,255,0.1);margin-top:16px;padding-top:12px;text-align:center;">
+    <a href="impressum.html" style="color:rgba(255,255,255,0.4);text-decoration:none;font-size:0.75rem;margin:0 12px;">Impressum</a>
+    <a href="datenschutz.html" style="color:rgba(255,255,255,0.4);text-decoration:none;font-size:0.75rem;margin:0 12px;">Datenschutz</a>
+  </div>
+</footer>
+          </blockquote>
         </div>
       </div>
 
@@ -535,83 +171,20 @@
   </div>
 </section>
 
-<!-- ═══════════════════════════════════════════════
-     STORY
-═══════════════════════════════════════════════ -->
-<section class="max-w-7xl mx-auto px-6 lg:px-12 py-20 lg:py-28">
-  <div class="grid lg:grid-cols-12 gap-12 lg:gap-20 items-start">
-
-    <div class="lg:col-span-5">
-      <div class="relative">
-        <div class="bg-cream-dark aspect-[4/5] relative overflow-hidden photo-beispiel-wrap" style="background-color:#DDD8D0;">
-          <img src="https://images.unsplash.com/photo-1621905251918-48416bd8575a?w=800&q=80" alt="Beispielfoto: Sanitär- und Heizungshandwerker bei der Arbeit" class="w-full h-full object-cover">
-          <div class="photo-beispiel-label"><span>Beispiel</span></div>
-          <div class="absolute bottom-0 left-0 right-0 bg-navy p-4" style="z-index:20;">
-            <p class="font-headline font-bold text-white text-lg uppercase tracking-wide">Alexander Schäffner</p>
-            <p class="font-body text-copper text-sm">Inhaber &amp; Meister SHK</p>
-          </div>
-        </div>
-        <div class="absolute -top-4 -left-4 w-16 h-16 border-2 border-copper opacity-50"></div>
-        <div class="absolute -right-4 -bottom-4 bg-navy text-white py-3 px-5 shadow-lg">
-          <p class="font-headline font-black text-3xl leading-none text-copper">1995</p>
-          <p class="font-body text-xs text-blue-200 tracking-widest uppercase">Gegründet</p>
-        </div>
-      </div>
-    </div>
-
-    <div class="lg:col-span-7">
-      <div class="flex items-center gap-3 mb-6">
-        <div class="w-8 h-px bg-copper"></div>
-        <span class="font-body text-copper text-sm font-semibold tracking-widest uppercase">Die Geschichte</span>
-      </div>
-
-      <h2 class="font-headline font-black text-navy leading-tight mb-8" style="font-size: clamp(2rem, 4vw, 3rem);">
-        GEGRÜNDET 1995 IN RETTIGHEIM.<br>GEWACHSEN DURCH WEITEREMPFEHLUNG.
-      </h2>
-
-      <div class="space-y-5 font-body text-ink text-base leading-relaxed" style="font-weight:400;">
-        <p>
-          Alexander Schäffner gründete seinen Betrieb 1995 mit einer schlichten Vorstellung davon, wie Handwerk funktionieren sollte: ankommen, zuhören, sauber arbeiten, fertig werden. Was klein begann, ist heute ein eingespielte Firma, die in Rettigheim und Umgebung bekannt ist – nicht durch Werbung, sondern weil Kunden andere Kunden schicken.
-        </p>
-        <p>
-          Die Meisterprüfung hängt nicht gerahmt im Büro. Sie zeigt sich darin, wie gearbeitet wird: jede Lötstelle, jede Rohrführung, jeder Anschluss. Wer einen Meisterbetrieb beauftragt, bekommt jemanden, der persönlich für das einsteht, was er gebaut hat.
-        </p>
-        <p>
-          Die Technik hat sich in 29 Jahren grundlegend verändert. Früher war es die einfache Gasheizung. Heute kommen Wärmepumpen, Pelletkessel und Solaranlagen dazu. Was gleich geblieben ist: Wenn das Wasser kalt bleibt oder die Heizung ausfällt, ist einer da. An 365 Tagen im Jahr, auch samstags, auch im Januar.
-        </p>
-      </div>
-
-      <div class="mt-10 pt-8 border-t border-cream-dark">
-        <blockquote class="relative">
-          <div class="absolute -top-3 -left-2 text-copper opacity-40 font-headline font-black" style="font-size:4rem; line-height:1;">"</div>
-          <p class="font-headline font-semibold text-navy text-xl pl-8 leading-snug italic">
-            Meine Kunden sollen wissen: Wenn ich sage, ich komme – dann komme ich. Und wenn ich eine Anlage einbaue, steht sie.
-          </p>
-          <footer class="mt-4 pl-8 font-body text-sm text-ink opacity-60">— Alexander Schäffner, Inhaber</footer>
-        </blockquote>
-      </div>
-    </div>
-
-  </div>
-</section>
-
-<!-- ═══════════════════════════════════════════════
-     TIMELINE
-═══════════════════════════════════════════════ -->
-<section class="bg-cream-dark texture-bg py-20 lg:py-28">
+<!-- TIMELINE -->
+<section class="texture-bg py-20 lg:py-28" style="background-color:#F5F2EE;">
   <div class="max-w-7xl mx-auto px-6 lg:px-12">
-
     <div class="grid lg:grid-cols-12 gap-12 items-start">
       <div class="lg:col-span-4">
         <div class="flex items-center gap-3 mb-6">
-          <div class="w-8 h-px bg-copper"></div>
-          <span class="font-body text-copper text-sm font-semibold tracking-widest uppercase">Der Weg</span>
+          <div class="w-8 h-px" style="background-color:#E8621A;"></div>
+          <span class="font-body text-sm font-semibold tracking-widest uppercase" style="color:#E8621A;">Der Weg</span>
         </div>
-        <h2 class="font-headline font-black text-navy leading-tight mb-6" style="font-size: clamp(2rem, 4vw, 3rem);">
+        <h2 class="font-headline font-black leading-tight mb-6" style="color:#1A3A5C; font-size: clamp(2rem, 4vw, 3rem);">
           29 JAHRE IN<br>MEILENSTEINEN.
         </h2>
-        <p class="font-body text-ink leading-relaxed" style="font-weight:300;">
-          Nicht jedes Jahr bringt eine große Veränderung. Aber manche Entscheidungen prägen einen Betrieb dauerhaft. Hier die wichtigsten Stationen seit der Gründung.
+        <p class="font-body leading-relaxed" style="color:#1C1C1C; font-weight:300;">
+          Nicht jedes Jahr bringt eine große Veränderung. Aber manche Entscheidungen prägen einen Betrieb dauerhaft. Hier die wichtigsten Stationen des Schäffner Teams seit der Gründung.
         </p>
       </div>
 
@@ -619,158 +192,147 @@
         <div class="relative timeline-line pl-14 space-y-10">
 
           <div class="relative">
-            <div class="absolute left-0 w-9 h-9 bg-copper rounded-full flex items-center justify-center shadow-md" style="top:2px; margin-left:-4.5px;">
-              <div class="w-3 h-3 bg-white rounded-full"></div>
+            <div class="absolute left-0 w-9 h-9 rounded-full flex items-center justify-center shadow-md" style="top:2px; margin-left:-4.5px; background-color:#E8621A;">
+              <div class="w-3 h-3 rounded-full" style="background-color:#ffffff;"></div>
             </div>
-            <div class="bg-white p-6 shadow-sm border-l-4 border-copper">
+            <div class="p-6 shadow-sm" style="background-color:#ffffff; border-left:4px solid #E8621A;">
               <div class="flex items-baseline gap-4 mb-2">
-                <span class="font-headline font-black text-copper text-2xl">1995</span>
-                <span class="font-headline font-semibold text-navy text-lg uppercase tracking-wide">Gründung in Rettigheim</span>
+                <span class="font-headline font-black text-2xl" style="color:#E8621A;">1995</span>
+                <span class="font-headline font-semibold text-lg uppercase tracking-wide" style="color:#1A3A5C;">Gründung in Rettigheim</span>
               </div>
-              <p class="font-body text-ink text-sm leading-relaxed" style="font-weight:300;">
-                Alexander Schäffner meldet seinen Meisterbetrieb für Heizung und Sanitär an. Erster Auftrag, erste Stammkunden – und von Anfang an keine Subunternehmer, keine Weitervermittlung.
-              </p>
+              <p class="font-body text-sm leading-relaxed" style="color:#1C1C1C; font-weight:300;">Alexander Schäffner meldet den Meisterbetrieb für Heizung und Sanitär an. Erster Auftrag, erste Stammkunden – und von Anfang an keine Subunternehmer, keine Weitervermittlung.</p>
             </div>
           </div>
 
           <div class="relative">
-            <div class="absolute left-0 w-9 h-9 bg-navy rounded-full flex items-center justify-center shadow-md" style="top:2px; margin-left:-4.5px;">
-              <div class="w-3 h-3 bg-copper rounded-full"></div>
+            <div class="absolute left-0 w-9 h-9 rounded-full flex items-center justify-center shadow-md" style="top:2px; margin-left:-4.5px; background-color:#1A3A5C;">
+              <div class="w-3 h-3 rounded-full" style="background-color:#E8621A;"></div>
             </div>
-            <div class="bg-white p-6 shadow-sm border-l-4 border-navy">
+            <div class="p-6 shadow-sm" style="background-color:#ffffff; border-left:4px solid #1A3A5C;">
               <div class="flex items-baseline gap-4 mb-2">
-                <span class="font-headline font-black text-navy text-2xl">2000</span>
-                <span class="font-headline font-semibold text-navy text-lg uppercase tracking-wide">Erstes festes Team</span>
+                <span class="font-headline font-black text-2xl" style="color:#1A3A5C;">2000</span>
+                <span class="font-headline font-semibold text-lg uppercase tracking-wide" style="color:#1A3A5C;">Erstes festes Team</span>
               </div>
-              <p class="font-body text-ink text-sm leading-relaxed" style="font-weight:300;">
-                Der Betrieb wächst. Mit dem ersten festen Mitarbeiter wird es möglich, mehrere Baustellen gleichzeitig zu betreuen – ohne an Verlässlichkeit einzubüßen.
-              </p>
+              <p class="font-body text-sm leading-relaxed" style="color:#1C1C1C; font-weight:300;">Das Schäffner Team wächst. Mit den ersten festen Mitarbeitern wird es möglich, mehrere Baustellen gleichzeitig zu betreuen – ohne an Verlässlichkeit einzubüßen.</p>
             </div>
           </div>
 
           <div class="relative">
-            <div class="absolute left-0 w-9 h-9 bg-copper rounded-full flex items-center justify-center shadow-md" style="top:2px; margin-left:-4.5px;">
-              <div class="w-3 h-3 bg-white rounded-full"></div>
+            <div class="absolute left-0 w-9 h-9 rounded-full flex items-center justify-center shadow-md" style="top:2px; margin-left:-4.5px; background-color:#E8621A;">
+              <div class="w-3 h-3 rounded-full" style="background-color:#ffffff;"></div>
             </div>
-            <div class="bg-white p-6 shadow-sm border-l-4 border-copper">
+            <div class="p-6 shadow-sm" style="background-color:#ffffff; border-left:4px solid #E8621A;">
               <div class="flex items-baseline gap-4 mb-2">
-                <span class="font-headline font-black text-copper text-2xl">2010</span>
-                <span class="font-headline font-semibold text-navy text-lg uppercase tracking-wide">Erneuerbare Heizsysteme</span>
+                <span class="font-headline font-black text-2xl" style="color:#E8621A;">2010</span>
+                <span class="font-headline font-semibold text-lg uppercase tracking-wide" style="color:#1A3A5C;">Erneuerbare Heizsysteme</span>
               </div>
-              <p class="font-body text-ink text-sm leading-relaxed" style="font-weight:300;">
-                Pelletkessel, Solarthermie, Pflanzenöl-Heizung: Der Betrieb bildet sich gezielt weiter und installiert ab jetzt auch alternative Systeme – neben dem klassischen Heizungs- und Sanitärservice.
-              </p>
+              <p class="font-body text-sm leading-relaxed" style="color:#1C1C1C; font-weight:300;">Pelletkessel, Solarthermie, Pflanzenöl-Heizung: Das Team bildet sich gezielt weiter und installiert ab jetzt auch alternative Systeme – neben dem klassischen Heizungs- und Sanitärservice.</p>
             </div>
           </div>
 
           <div class="relative">
-            <div class="absolute left-0 w-9 h-9 bg-navy rounded-full flex items-center justify-center shadow-md" style="top:2px; margin-left:-4.5px;">
-              <div class="w-3 h-3 bg-copper rounded-full"></div>
+            <div class="absolute left-0 w-9 h-9 rounded-full flex items-center justify-center shadow-md" style="top:2px; margin-left:-4.5px; background-color:#1A3A5C;">
+              <div class="w-3 h-3 rounded-full" style="background-color:#E8621A;"></div>
             </div>
-            <div class="bg-white p-6 shadow-sm border-l-4 border-navy">
+            <div class="p-6 shadow-sm" style="background-color:#ffffff; border-left:4px solid #1A3A5C;">
               <div class="flex items-baseline gap-4 mb-2">
-                <span class="font-headline font-black text-navy text-2xl">2020</span>
-                <span class="font-headline font-semibold text-navy text-lg uppercase tracking-wide">Wärmepumpen-Qualifikation</span>
+                <span class="font-headline font-black text-2xl" style="color:#1A3A5C;">2020</span>
+                <span class="font-headline font-semibold text-lg uppercase tracking-wide" style="color:#1A3A5C;">Wärmepumpen-Qualifikation</span>
               </div>
-              <p class="font-body text-ink text-sm leading-relaxed" style="font-weight:300;">
-                Neue Zertifikate, neue Anlagen. Der Betrieb installiert und wartet jetzt Wärmepumpen nach aktuellem Stand der Technik – inklusive hydraulischem Abgleich und Förderberatung nach BEG.
-              </p>
+              <p class="font-body text-sm leading-relaxed" style="color:#1C1C1C; font-weight:300;">Neue Zertifikate, neue Anlagen. Das Schäffner Team installiert und wartet jetzt Wärmepumpen nach aktuellem Stand der Technik – inklusive hydraulischem Abgleich und Förderberatung nach BEG.</p>
             </div>
           </div>
 
           <div class="relative">
-            <div class="absolute left-0 w-9 h-9 bg-copper rounded-full flex items-center justify-center shadow-md" style="top:2px; margin-left:-4.5px;">
-              <div class="w-3 h-3 bg-white rounded-full"></div>
+            <div class="absolute left-0 w-9 h-9 rounded-full flex items-center justify-center shadow-md" style="top:2px; margin-left:-4.5px; background-color:#E8621A;">
+              <div class="w-3 h-3 rounded-full" style="background-color:#ffffff;"></div>
             </div>
-            <div class="bg-navy p-6 shadow-sm">
+            <div class="p-6 shadow-sm" style="background-color:#1A3A5C;">
               <div class="flex items-baseline gap-4 mb-2">
-                <span class="font-headline font-black text-copper text-2xl">2024</span>
-                <span class="font-headline font-semibold text-white text-lg uppercase tracking-wide">29 Jahre – der Betrieb läuft</span>
+                <span class="font-headline font-black text-2xl" style="color:#E8621A;">2024</span>
+                <span class="font-headline font-semibold text-lg uppercase tracking-wide" style="color:#ffffff;">29 Jahre – der Betrieb läuft</span>
               </div>
-              <p class="font-body text-blue-100 text-sm leading-relaxed" style="font-weight:300;">
-                Fast drei Jahrzehnte, hunderte Anlagen in der Region, 365-Tage-Erreichbarkeit. Die meisten Kunden kommen seit Jahren – manche schicken ihre Kinder.
-              </p>
+              <p class="font-body text-sm leading-relaxed" style="color:#bfdbfe; font-weight:300;">Fast drei Jahrzehnte, hunderte Anlagen in der Region, 365-Tage-Erreichbarkeit. Das Schäffner Führungsteam trägt den Betrieb heute gemeinsam weiter – die meisten Kunden kommen seit Jahren, manche schicken ihre Kinder.</p>
             </div>
           </div>
 
         </div>
       </div>
     </div>
-
   </div>
 </section>
 
-<!-- ═══════════════════════════════════════════════
-     MEISTERBETRIEB
-═══════════════════════════════════════════════ -->
-<section class="max-w-7xl mx-auto px-6 lg:px-12 py-20 lg:py-28">
-  <div class="grid lg:grid-cols-12 gap-12 items-center">
+<!-- MEISTERBETRIEB -->
+<section class="py-20 lg:py-28" style="background-color:#1A3A5C;">
+  <div class="max-w-7xl mx-auto px-6 lg:px-12">
+    <div class="grid lg:grid-cols-12 gap-12 items-center">
 
-    <div class="lg:col-span-6">
-      <div class="flex items-center gap-3 mb-6">
-        <div class="w-8 h-px bg-copper"></div>
-        <span class="font-body text-copper text-sm font-semibold tracking-widest uppercase">Meisterbetrieb</span>
+      <div class="lg:col-span-6">
+        <div class="flex items-center gap-3 mb-6">
+          <div class="w-8 h-px" style="background-color:#E8621A;"></div>
+          <span class="font-body text-sm font-semibold tracking-widest uppercase" style="color:#E8621A;">Meisterbetrieb</span>
+        </div>
+        <h2 class="font-headline font-black leading-tight mb-6" style="color:#ffffff; font-size: clamp(2rem, 4vw, 3rem);">
+          WAS DER MEISTERTITEL<br>KONKRET BEDEUTET.
+        </h2>
+        <p class="font-body leading-relaxed mb-6" style="color:#bfdbfe; font-weight:300;">
+          Der Meistertitel ist kein Marketingbegriff. Er ist eine rechtlich geregelte Qualifikationsstufe – mit echten Konsequenzen für Sie als Kunde:
+        </p>
+        <div class="space-y-4">
+          <div class="flex gap-4 items-start">
+            <div class="mt-1 flex-shrink-0 w-6 h-6 rounded-full flex items-center justify-center" style="background-color:#E8621A;">
+              <svg class="w-3 h-3" style="color:#ffffff;" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/></svg>
+            </div>
+            <div>
+              <p class="font-body font-semibold text-base" style="color:#ffffff;">Ausbildungsrecht</p>
+              <p class="font-body text-sm leading-relaxed mt-1" style="color:#bfdbfe; font-weight:300;">Nur Meisterbetriebe dürfen im zulassungspflichtigen Handwerk ausbilden. Das sichert den Nachwuchs – und zeigt, dass hier jemand langfristig denkt.</p>
+            </div>
+          </div>
+          <div class="flex gap-4 items-start">
+            <div class="mt-1 flex-shrink-0 w-6 h-6 rounded-full flex items-center justify-center" style="background-color:#E8621A;">
+              <svg class="w-3 h-3" style="color:#ffffff;" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/></svg>
+            </div>
+            <div>
+              <p class="font-body font-semibold text-base" style="color:#ffffff;">Persönliche Verantwortung</p>
+              <p class="font-body text-sm leading-relaxed mt-1" style="color:#bfdbfe; font-weight:300;">Das Schäffner Team steht mit seinem Namen für die Arbeit. Keine Anonymität, keine Weiterleitung an Dritte ohne direkte Aufsicht.</p>
+            </div>
+          </div>
+          <div class="flex gap-4 items-start">
+            <div class="mt-1 flex-shrink-0 w-6 h-6 rounded-full flex items-center justify-center" style="background-color:#E8621A;">
+              <svg class="w-3 h-3" style="color:#ffffff;" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/></svg>
+            </div>
+            <div>
+              <p class="font-body font-semibold text-base" style="color:#ffffff;">Haftung ohne Ausrede</p>
+              <p class="font-body text-sm leading-relaxed mt-1" style="color:#bfdbfe; font-weight:300;">Mängel werden behoben. Die Betriebshaftpflicht eines eingetragenen Meisterbetriebs ist Pflicht, kein Bonus.</p>
+            </div>
+          </div>
+          <div class="flex gap-4 items-start">
+            <div class="mt-1 flex-shrink-0 w-6 h-6 rounded-full flex items-center justify-center" style="background-color:#E8621A;">
+              <svg class="w-3 h-3" style="color:#ffffff;" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/></svg>
+            </div>
+            <div>
+              <p class="font-body font-semibold text-base" style="color:#ffffff;">Eintrag in der Handwerksrolle</p>
+              <p class="font-body text-sm leading-relaxed mt-1" style="color:#bfdbfe; font-weight:300;">Überprüfbar, öffentlich, transparent. Kein Graubetrieb, keine Schwarzarbeit – eingetragen und geprüft bei der Handwerkskammer.</p>
+            </div>
+          </div>
+        </div>
       </div>
-      <h2 class="font-headline font-black text-navy leading-tight mb-6" style="font-size: clamp(2rem, 4vw, 3rem);">
-        WAS DER MEISTERTITEL<br>KONKRET BEDEUTET.
-      </h2>
-      <p class="font-body text-ink leading-relaxed mb-6" style="font-weight:300;">
-        Der Meistertitel ist kein Marketingbegriff. Er ist eine rechtlich geregelte Qualifikationsstufe – mit echten Konsequenzen für Sie als Kunde:
-      </p>
 
-      <div class="space-y-4">
-        <div class="flex gap-4 items-start">
-          <div class="mt-1 flex-shrink-0 w-6 h-6 bg-copper rounded-full flex items-center justify-center">
-            <svg class="w-3 h-3 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/></svg>
+      <div class="lg:col-span-6">
+        <div class="relative">
+          <div class="aspect-[4/3] relative overflow-hidden photo-beispiel-wrap" style="background-color:#EDE9E3;">
+            <img src="https://images.unsplash.com/photo-1559597628-33f4c275a43f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NjEyOTR8MHwxfHNlYXJjaHw2fHxCZWlzcGllbGZvdG8lM0ElMjBIYW5kd2Vya2xpY2hlcyUyMERldGFpbCUyMCVFMiU4MCU5MyUyME1ldGFsd2Vya3pldWd8ZW58MHwwfHx8MTc3OTc5MTAwMnww&ixlib=rb-4.1.0&q=80&w=1080" alt="black tools in box" class="w-full h-full object-cover" style=" cursor: pointer;">
+            <div class="photo-beispiel-label"><span>Beispiel</span></div>
           </div>
-          <div>
-            <p class="font-body font-semibold text-navy text-base">Ausbildungsrecht</p>
-            <p class="font-body text-ink text-sm leading-relaxed mt-1" style="font-weight:300;">Nur Meisterbetriebe dürfen im zulassungspflichtigen Handwerk ausbilden. Das sichert den Nachwuchs – und zeigt, dass hier jemand langfristig denkt.</p>
-          </div>
-        </div>
-        <div class="flex gap-4 items-start">
-          <div class="mt-1 flex-shrink-0 w-6 h-6 bg-copper rounded-full flex items-center justify-center">
-            <svg class="w-3 h-3 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/></svg>
-          </div>
-          <div>
-            <p class="font-body font-semibold text-navy text-base">Persönliche Verantwortung</p>
-            <p class="font-body text-ink text-sm leading-relaxed mt-1" style="font-weight:300;">Der Meister steht mit seinem Namen für die Arbeit. Keine Anonymität, keine Weiterleitung an Dritte ohne direkte Aufsicht.</p>
-          </div>
-        </div>
-        <div class="flex gap-4 items-start">
-          <div class="mt-1 flex-shrink-0 w-6 h-6 bg-copper rounded-full flex items-center justify-center">
-            <svg class="w-3 h-3 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/></svg>
-          </div>
-          <div>
-            <p class="font-body font-semibold text-navy text-base">Haftung ohne Ausrede</p>
-            <p class="font-body text-ink text-sm leading-relaxed mt-1" style="font-weight:300;">Mängel werden behoben. Die Betriebshaftpflicht eines eingetragenen Meisterbetriebs ist Pflicht, kein Bonus.</p>
-          </div>
-        </div>
-        <div class="flex gap-4 items-start">
-          <div class="mt-1 flex-shrink-0 w-6 h-6 bg-copper rounded-full flex items-center justify-center">
-            <svg class="w-3 h-3 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/></svg>
-          </div>
-          <div>
-            <p class="font-body font-semibold text-navy text-base">Eintrag in der Handwerksrolle</p>
-            <p class="font-body text-ink text-sm leading-relaxed mt-1" style="font-weight:300;">Überprüfbar, öffentlich, transparent. Kein Graubetrieb, keine Schwarzarbeit – eingetragen und geprüft bei der Handwerkskammer.</p>
+          <div class="absolute -bottom-6 -right-6 p-6 shadow-xl" style="background-color:#E8621A; z-index:20;">
+            <p class="font-headline font-black text-4xl leading-none" style="color:#ffffff;">M</p>
           </div>
         </div>
       </div>
+
     </div>
-
-    <div class="lg:col-span-6">
-      <div class="relative">
-        <div class="aspect-[4/3] bg-cream-dark relative overflow-hidden photo-beispiel-wrap">
-          <img src="https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=800&q=80" alt="Beispielfoto: Handwerkliches Detail – Kupferrohr und Werkzeug" class="w-full h-full object-cover">
-          <div class="photo-beispiel-label"><span>Beispiel</span></div>
-        </div>
-        <div class="absolute -bottom-6 -right-6 bg-copper text-white p-6 shadow-xl" style="z-index:20;">
-          <p class="font-headline font-black text-4xl leading-none">M</p>
-        </div>
-      </div>
-    </div>
-
   </div>
 </section>
+
 </body>
 </html>
