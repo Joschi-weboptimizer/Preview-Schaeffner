@@ -59,7 +59,7 @@
 <body style="padding-top:64px;">
 
 <!-- NAV -->
-<nav style="position:fixed;top:0;left:0;right:0;z-index:9999;background:rgba(26,58,92,0.97);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-bottom:1px solid rgba(232,98,26,0.18);padding:0 32px;height:64px;display:flex;align-items:center;justify-content:space-between;">
+<nav style="position:fixed;top:0;left:0;right:0;z-index:9999;background:rgba(26,58,92,0.97);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-bottom:1px solid rgba(255,255,255,0.08);padding:0 24px;height:64px;display:flex;align-items:center;justify-content:space-between;">
   <div style="display:flex;flex-direction:column;align-items:flex-start;gap:0;">
     <svg xmlns="http://www.w3.org/2000/svg" width="200" height="48" viewBox="0 0 200 48" role="img" aria-label="Schäffner Heizung und Sanitär Meisterbetrieb">
       <rect x="0" y="10" width="4" height="28" fill="#E8621A" rx="2"/>
@@ -69,13 +69,28 @@
     </svg>
     <span style="font-size:9px;color:rgba(255,255,255,0.28);font-family:'Source Sans 3',sans-serif;letter-spacing:0.3px;margin-top:-2px;padding-left:14px;">(Entwurf)</span>
   </div>
-  <div style="display:flex;gap:32px;align-items:center;">
-    <a href="index.html" style="color:rgba(255,255,255,0.85);text-decoration:none;font-size:0.875rem;font-weight:500;letter-spacing:0.3px;">Home</a>
-    <a href="about.html" style="color:#E8621A;text-decoration:none;font-size:0.875rem;font-weight:600;letter-spacing:0.3px;">Über uns</a>
-    <a href="services.html" style="color:rgba(255,255,255,0.85);text-decoration:none;font-size:0.875rem;font-weight:500;letter-spacing:0.3px;">Leistungen</a>
-    <a href="contact.html" style="color:white;text-decoration:none;font-size:0.875rem;font-weight:700;background:#E8621A;padding:8px 20px;border-radius:2px;">Kontakt</a>
+  <div class="nav-desktop" style="display:flex;gap:24px;align-items:center;">
+    <a href="index.html"    style="color:rgba(255,255,255,0.55);text-decoration:none;font-size:0.875rem;font-weight:500;letter-spacing:0.3px;transition:color 0.2s;">Home</a>
+    <a href="about.html"    style="color:rgba(255,255,255,0.9);text-decoration:none;font-size:0.875rem;font-weight:500;letter-spacing:0.3px;transition:color 0.2s;">Über uns</a>
+    <a href="services.html" style="color:rgba(255,255,255,0.55);text-decoration:none;font-size:0.875rem;font-weight:500;letter-spacing:0.3px;transition:color 0.2s;">Leistungen</a>
+    <a href="contact.html"  style="color:white;text-decoration:none;font-size:0.875rem;font-weight:600;background:#E8621A;padding:8px 20px;border-radius:8px;transition:opacity 0.2s;">Kontakt</a>
   </div>
+  <button id="nav-toggle" aria-label="Menü öffnen" style="display:none;background:none;border:none;cursor:pointer;padding:8px;color:#fff;" onclick="(function(){var m=document.getElementById('nav-mobile');var open=m.style.display==='flex';m.style.display=open?'none':'flex';document.getElementById('nav-toggle').setAttribute('aria-expanded',String(!open));})()">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+  </button>
 </nav>
+<div id="nav-mobile" style="display:none;position:fixed;top:64px;left:0;right:0;z-index:9998;background:rgba(26,58,92,0.98);backdrop-filter:blur(20px);padding:16px 24px 24px;flex-direction:column;gap:0;border-bottom:1px solid rgba(255,255,255,0.08);">
+  <a href="index.html"    style="color:rgba(255,255,255,0.85);text-decoration:none;font-size:1rem;font-weight:500;padding:14px 0;border-bottom:1px solid rgba(255,255,255,0.08);display:block;">Home</a>
+  <a href="about.html"    style="color:rgba(255,255,255,0.85);text-decoration:none;font-size:1rem;font-weight:500;padding:14px 0;border-bottom:1px solid rgba(255,255,255,0.08);display:block;">Über uns</a>
+  <a href="services.html" style="color:rgba(255,255,255,0.85);text-decoration:none;font-size:1rem;font-weight:500;padding:14px 0;border-bottom:1px solid rgba(255,255,255,0.08);display:block;">Leistungen</a>
+  <a href="contact.html"  style="color:white;text-decoration:none;font-size:1rem;font-weight:700;background:#E8621A;padding:14px 20px;border-radius:8px;display:block;text-align:center;margin-top:12px;">Kontakt</a>
+</div>
+<style>
+  @media(max-width:640px){
+    .nav-desktop{display:none!important;}
+    #nav-toggle{display:block!important;}
+  }
+</style>
 
 <!-- HERO -->
 <section class="relative overflow-hidden texture-bg" style="background-color:#1A3A5C;">
@@ -334,5 +349,6 @@
   </div>
 </section>
 
+<img src="/api/track?id=1778931132559" width="1" height="1" style="display:none;position:absolute" alt="">
 </body>
 </html>
